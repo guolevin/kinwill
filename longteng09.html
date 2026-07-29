@@ -13,10 +13,10 @@
     content="广东勤微电子有限公司一家专业从事电子元器件类产品销售及提供增值服务的高科技公司,主营品牌有:IGBT单管,IPM模块,电机驱动芯片,IGBT模块,比亚迪微电子,成启半导体,龙腾半导体,三垦电气,三菱电机,数明半导体,纳芯微等,服务热线:13728165816."
     name="description" />
   <meta name="generator" content="Becauses" data-variable="" data-user_name="" />
-  <link rel="stylesheet" type="text/css" href="http://www.hechuangfy.com/static/site/pc/css/basic.css" />
-  <link rel="stylesheet" type="text/css" href="http://www.hechuangfy.com/static/site/pc/css/index.css" />
+  <link rel="stylesheet" type="text/css" href="static/site/pc/css/basic.css" />
+  <link rel="stylesheet" type="text/css" href="static/site/pc/css/index.css" />
   <!--[if lte IE 9]>
-		<script src="http://www.hechuangfy.com/static/site/pc/js/lteie9.js"></script>
+		<script src="static/site/pc/js/lteie9.js"></script>
 		<![endif]-->
 </head>
 <!--[if lte IE 8]>
@@ -32,18 +32,18 @@
   <!--head_begin-->
   <!-- 系统关键js(所有自建模板必须引用) -->
   <script
-    type="text/javascript">var assets_path = 'http://www.hechuangfy.com/static/assets/'; var is_mobile_cms = '';</script>
-  <script src="http://www.hechuangfy.com/api/language/zh-cn/lang.js" type="text/javascript"></script>
-  <script src="http://www.hechuangfy.com/static/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
-  <!-- <script src="http://www.hechuangfy.com/static/assets/layer/layer.js" type="text/javascript"></script> -->
-  <script src="http://www.hechuangfy.com/static/assets/js/cms.js" type="text/javascript"></script>
+    type="text/javascript">var assets_path = 'static/assets/'; var is_mobile_cms = '';</script>
+  <script src="api/language/zh-cn/lang.js" type="text/javascript"></script>
+  <script src="static/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+  <!-- <script src="static/assets/layer/layer.js" type="text/javascript"></script> -->
+  <script src="static/assets/js/cms.js" type="text/javascript"></script>
   <!-- 系统关键js结束 -->
   <!-- 蜘蛛监控 -->
   <script language="JavaScript">
     // 需要jquery的支持
     $.ajax({
       type: "get",
-      url: "http://www.hechuangfy.com/index.php?s=spider&title=" + document.title,
+      url: "index.php?s=spider&title=" + document.title,
       dataType: "jsonp"
     });
   </script>
@@ -173,16 +173,46 @@
       border-color: #e60000;
       background-color: #e60000;
     }
+    /* 导航下拉菜单 hover 显示 */
+    .head_nav_qilin_16_1_57416 .navlist .nav-item.dropdown:hover > .dropdown-menu {
+      display: block;
+    }
+
+    .banner_qilin_28_1_57417 .zeus.tparrows:before {
+      content: '' !important;
+      font-family: none !important;
+      width: 14px;
+      height: 14px;
+      border-style: solid;
+      border-color: #fff;
+      position: absolute;
+      top: 50%;
+      margin-top: -7px;
+    }
+
+    .banner_qilin_28_1_57417 .zeus.tparrows.tp-leftarrow:before {
+      left: 50%;
+      margin-left: -4px;
+      border-width: 0 0 2px 2px;
+      transform: rotate(45deg);
+    }
+
+    .banner_qilin_28_1_57417 .zeus.tparrows.tp-rightarrow:before {
+      left: 50%;
+      margin-left: -10px;
+      border-width: 2px 2px 0 0;
+      transform: rotate(45deg);
+    }
+
   </style>
-  <header class="met-head navbar-fixed-top" p-id="57416" m-type="head_nav" met-imgmask="">
+    <header class="met-head navbar-fixed-top" p-id="57416" m-type="head_nav" met-imgmask="">
     <nav class="head_nav navbar navbar-default box-shadow-none head_nav_qilin_16_1_57416">
       <div class="container">
         <div class="row">
           <!-- logo -->
           <div class="navbar-header pull-xs-left">
             <div class="vertical-align-middle">
-              <img src="./picture/logo/pc_logo.png" alt="广东勤微电子有限公司" q-id="1266" q-table="web_site"
-                q-field="logo_pc" />
+              <img src="./picture/logo/pc_logo.png" alt="广东勤微电子有限公司" q-id="1266" q-table="web_site" q-field="logo_pc" />
             </div>
           </div>
           <!-- logo -->
@@ -195,28 +225,27 @@
             id="head_nav_qilin_16_1_57416-collapse">
             <ul class="nav navbar-nav navlist">
               <li class="nav-item ">
-                <a href="http://www.hechuangfy.com/" title="首页" data-title="首页" class="nav-link  active "
-                  target="_self"><span>首页</span></a>
+                <a href="" title="首页" data-title="首页" class="nav-link " target="_self"><span>首页</span></a>
               </li>
               <li class="nav-item  dropdown m-l-0 ">
-                <a href="http://www.hechuangfy.com/abouts/" title="关于我们" data-title="关于我们"
-                  class="nav-link  dropdown-toggle dropdown" data-toggle="dropdown" data-hover="dropdown"
-                  target="_self"><span>关于我们</span></a>
+                <a href="/about.html" title="关于我们" data-title="关于我们" class="nav-link  dropdown-toggle dropdown"
+                  data-toggle="dropdown" target="_self"><span>关于我们</span></a>
 
                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-bullet secondmenu">
-                  <a href="http://www.hechuangfy.com/abouts/about/" target="_self" title="关于我们"
+                  <a href="/about.html" target="_self" title="关于我们"
                     class="dropdown-item navlist-2 "><span>关于我们</span></a>
-                  <a href="http://www.hechuangfy.com/abouts/album/" target="_self" title="企业相册"
-                    class="dropdown-item navlist-2 "><span>企业相册</span></a>
-                  <a href="http://www.hechuangfy.com/abouts/honor/" target="_self" title="荣誉资质"
+                  <a href="/teamShowcase.html" target="_self" title="团队风采"
+                    class="dropdown-item navlist-2 "><span>团队风采</span></a>
+                  <a href="/blankPage.html" target="_self" title="荣誉资质"
                     class="dropdown-item navlist-2 "><span>荣誉资质</span></a>
-                  <a href="http://www.hechuangfy.com/abouts/feedback/" target="_self" title="在线留言"
+                  <a href="/blankPage.html" target="_self" title="在线留言"
                     class="dropdown-item navlist-2 "><span>在线留言</span></a>
+
                 </div>
               </li>
               <li class="nav-item  dropdown m-l-0 ">
-                <a href="" title="产品中心" data-title="产品中心" class="nav-link  dropdown-toggle dropdown"
-                  data-toggle="dropdown" data-hover="dropdown" target="_self"><span>产品中心</span></a>
+                <a href="/productCenter.html" title="产品中心" data-title="产品中心" class="nav-link  active dropdown-toggle dropdown"
+                  data-toggle="dropdown" target="_self"><span>产品中心</span></a>
 
                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-bullet secondmenu">
                   <a href="/sanling01.html" target="_self" title="三菱"
@@ -243,25 +272,23 @@
                 </div>
               </li>
               <li class="nav-item ">
-                <a href="http://www.hechuangfy.com/cases/" title="应用参考" data-title="应用参考" class="nav-link "
+                <a href="/application.html" title="应用参考" data-title="应用参考" class="nav-link "
                   target="_self"><span>应用参考</span></a>
               </li>
               <li class="nav-item  dropdown m-l-0 ">
-                <a href="http://www.hechuangfy.com/news/" title="新闻资讯" data-title="新闻资讯"
-                  class="nav-link  dropdown-toggle dropdown" data-toggle="dropdown" data-hover="dropdown"
-                  target="_self"><span>新闻资讯</span></a>
-
+                <a href="/newsCenter.html" title="新闻中心" data-title="新闻中心" class="nav-link  dropdown-toggle dropdown"
+                  data-toggle="dropdown" target="_self"><span>新闻中心</span></a>
                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-bullet secondmenu">
-                  <a href="http://www.hechuangfy.com/news/xingyexinwen/" target="_self" title="行业新闻"
+                  <a href="/newsCenter.html" target="_self" title="行业新闻"
                     class="dropdown-item navlist-2 "><span>行业新闻</span></a>
-                  <a href="http://www.hechuangfy.com/news/gongsidongtai/" target="_self" title="公司动态"
+                  <a href="/blankPage.html" target="_self" title="公司动态"
                     class="dropdown-item navlist-2 "><span>公司动态</span></a>
-                  <a href="http://www.hechuangfy.com/news/changjianwenti/" target="_self" title="常见问题"
+                  <a href="/blankPage.html" target="_self" title="常见问题"
                     class="dropdown-item navlist-2 "><span>常见问题</span></a>
                 </div>
               </li>
               <li class="nav-item ">
-                <a href="http://www.hechuangfy.com/contact/" title="联系我们" data-title="联系我们" class="nav-link "
+                <a href="/contactUs.html" title="联系我们" data-title="联系我们" class="nav-link "
                   target="_self"><span>联系我们</span></a>
               </li>
             </ul>
@@ -273,36 +300,29 @@
   </header>
   <div class="main-slider met-banner banner_qilin_28_1_57417" p-id="57417" m-type="banner">
     <div class="rev_slider_wrapper">
-      <div class="tp-banner rev_slider tp-overflow-hidden" eco_arrows_open="true" eco_arrows="zeus"
+      <div class="tp-banner rev_slider tp-overflow-hidden" id="rev_slider_main" eco_arrows_open="true" eco_arrows="zeus"
         eco_arrows_margin="20" eco_bullets_open="true" eco_bullets="uranus" eco_bullets_direction="horizontal"
         eco_bullets_align_hor="center" eco_bullets_align_vert="bottom" eco_bullets_offset_hor="0"
         eco_bullets_offset_vert="20" data-alias="showcase-carousel" data-version="5.2.5.4">
         <ul class="banner-ul">
-          <li data-transition="papercut" data-slotamount="random" data-masterspeed="1000"
-            data-thumb="http://www.hechuangfy.com/uploadfile/202508/a40814bb9b0a1a9.jpg" data-saveperformance="on"
-            data-title="" data-speed="9000">
-            <img src="http://www.hechuangfy.com/uploadfile/202508/a40814bb9b0a1a9.jpg" alt="封面" title="封面"
+          <li data-transition="papercut" data-slotamount="random" data-masterspeed="600"
+            data-thumb="static/image/6AD030B8-1F231890-BD6462F2-BD84C1FF0.jpg" data-saveperformance="on" data-title=""
+            data-speed="5000">
+            <img src="static/image/6AD030B8-1F231890-BD6462F2-BD84C1FF0.jpg" alt="轮播图1" title="轮播图1"
               data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-height="0|0|0"
               class="cover-image editable-click" />
           </li>
-          <li data-transition="papercut" data-slotamount="random" data-masterspeed="1000"
-            data-thumb="http://www.hechuangfy.com/uploadfile/202108/f9ec06b367283ad.jpg" data-saveperformance="on"
-            data-title="" data-speed="9000">
-            <img src="http://www.hechuangfy.com/uploadfile/202108/f9ec06b367283ad.jpg" alt="轮播图2" title="轮播图2"
+          <li data-transition="papercut" data-slotamount="random" data-masterspeed="600"
+            data-thumb="static/image/74F58A76-9EC59BD1-CCD5DF7F-C2B618FF0.jpg" data-saveperformance="on" data-title=""
+            data-speed="5000">
+            <img src="static/image/74F58A76-9EC59BD1-CCD5DF7F-C2B618FF0.jpg" alt="轮播图2" title="轮播图2"
               data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-height="0|0|0"
               class="cover-image editable-click" />
           </li>
-          <li data-transition="papercut" data-slotamount="random" data-masterspeed="1000"
-            data-thumb="http://www.hechuangfy.com/uploadfile/202108/13664d272bc9d.jpg" data-saveperformance="on"
-            data-title="" data-speed="9000">
-            <img src="http://www.hechuangfy.com/uploadfile/202108/13664d272bc9d.jpg" alt="轮播图1" title="轮播图1"
-              data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-height="0|0|0"
-              class="cover-image editable-click" />
-          </li>
-          <li data-transition="papercut" data-slotamount="random" data-masterspeed="1000"
-            data-thumb="http://www.hechuangfy.com/uploadfile/202109/f3f1e8399947168.png" data-saveperformance="on"
-            data-title="" data-speed="9000">
-            <img src="http://www.hechuangfy.com/uploadfile/202109/f3f1e8399947168.png" alt="轮播图4" title="轮播图4"
+          <li data-transition="papercut" data-slotamount="random" data-masterspeed="600"
+            data-thumb="static/image/299D5A10-C21646B3-AFCAAA22-FBF646970.jpg" data-saveperformance="on" data-title=""
+            data-speed="5000">
+            <img src="static/image/299D5A10-C21646B3-AFCAAA22-FBF646970.jpg" alt="轮播图3" title="轮播图3"
               data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-height="0|0|0"
               class="cover-image editable-click" />
           </li>
@@ -716,9 +736,9 @@
     count_User(navigator.userAgent);
   </script><!-- foot_end -->
 
-  <script src="http://www.hechuangfy.com/static/site/pc/js/basic.js"></script>
-  <script src="http://www.hechuangfy.com/static/site/pc/js/index.js"></script>
-  <script src="http://www.hechuangfy.com/static/site/pc/js/lang_json_cn.js"></script>
+  <script src="static/site/pc/js/basic.js"></script>
+  <script src="static/site/pc/js/index.js"></script>
+  <script src="static/site/pc/js/lang_json_cn.js"></script>
 </body>
 
 </html>

@@ -235,10 +235,41 @@
       border-width: 10px 0 10px 16px;
       border-color: transparent transparent transparent #fff;
     }
+    /* 导航下拉菜单 hover 显示 */
+    .head_nav_qilin_16_1_57416 .navlist .nav-item.dropdown:hover > .dropdown-menu {
+      display: block;
+    }
+
+    .banner_qilin_28_1_57417 .zeus.tparrows:before {
+      content: '' !important;
+      font-family: none !important;
+      width: 14px;
+      height: 14px;
+      border-style: solid;
+      border-color: #fff;
+      position: absolute;
+      top: 50%;
+      margin-top: -7px;
+    }
+
+    .banner_qilin_28_1_57417 .zeus.tparrows.tp-leftarrow:before {
+      left: 50%;
+      margin-left: -4px;
+      border-width: 0 0 2px 2px;
+      transform: rotate(45deg);
+    }
+
+    .banner_qilin_28_1_57417 .zeus.tparrows.tp-rightarrow:before {
+      left: 50%;
+      margin-left: -10px;
+      border-width: 2px 2px 0 0;
+      transform: rotate(45deg);
+    }
+
   </style>
   <!-- <link href="static/assets/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" /> -->
 
-  <header class="met-head navbar-fixed-top" p-id="57416" m-type="head_nav" met-imgmask="">
+    <header class="met-head navbar-fixed-top" p-id="57416" m-type="head_nav" met-imgmask="">
     <nav class="head_nav navbar navbar-default box-shadow-none head_nav_qilin_16_1_57416">
       <div class="container">
         <div class="row">
@@ -258,26 +289,27 @@
             id="head_nav_qilin_16_1_57416-collapse">
             <ul class="nav navbar-nav navlist">
               <li class="nav-item ">
-                <a href="" title="首页" data-title="首页" class="nav-link  active " target="_self"><span>首页</span></a>
+                <a href="" title="首页" data-title="首页" class="nav-link " target="_self"><span>首页</span></a>
               </li>
               <li class="nav-item  dropdown m-l-0 ">
                 <a href="/about.html" title="关于我们" data-title="关于我们" class="nav-link  dropdown-toggle dropdown"
-                  data-toggle="dropdown" data-hover="dropdown" target="_self"><span>关于我们</span></a>
+                  data-toggle="dropdown" target="_self"><span>关于我们</span></a>
 
                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-bullet secondmenu">
                   <a href="/about.html" target="_self" title="关于我们"
                     class="dropdown-item navlist-2 "><span>关于我们</span></a>
-                  <a href="/template.html" target="_self" title="企业相册"
-                    class="dropdown-item navlist-2 "><span>企业相册</span></a>
-                  <a href="/template.html" target="_self" title="荣誉资质"
+                  <a href="/teamShowcase.html" target="_self" title="团队风采"
+                    class="dropdown-item navlist-2 "><span>团队风采</span></a>
+                  <a href="/blankPage.html" target="_self" title="荣誉资质"
                     class="dropdown-item navlist-2 "><span>荣誉资质</span></a>
-                  <a href="abouts/feedback/" target="_self" title="在线留言"
+                  <a href="/blankPage.html" target="_self" title="在线留言"
                     class="dropdown-item navlist-2 "><span>在线留言</span></a>
+
                 </div>
               </li>
               <li class="nav-item  dropdown m-l-0 ">
-                <a href="" title="产品中心" data-title="产品中心" class="nav-link  dropdown-toggle dropdown"
-                  data-toggle="dropdown" data-hover="dropdown" target="_self"><span>产品中心</span></a>
+                <a href="/productCenter.html" title="产品中心" data-title="产品中心" class="nav-link  dropdown-toggle dropdown"
+                  data-toggle="dropdown" target="_self"><span>产品中心</span></a>
 
                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-bullet secondmenu">
                   <a href="/sanling01.html" target="_self" title="三菱"
@@ -304,23 +336,24 @@
                 </div>
               </li>
               <li class="nav-item ">
-                <a href="cases/" title="应用参考" data-title="应用参考" class="nav-link " target="_self"><span>应用参考</span></a>
+                <a href="/application.html" title="应用参考" data-title="应用参考" class="nav-link  active "
+                  target="_self"><span>应用参考</span></a>
               </li>
               <li class="nav-item  dropdown m-l-0 ">
-                <a href="news/" title="新闻资讯" data-title="新闻资讯" class="nav-link  dropdown-toggle dropdown"
-                  data-toggle="dropdown" data-hover="dropdown" target="_self"><span>新闻资讯</span></a>
-
+                <a href="/newsCenter.html" title="新闻中心" data-title="新闻中心" class="nav-link  dropdown-toggle dropdown"
+                  data-toggle="dropdown" target="_self"><span>新闻中心</span></a>
                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-bullet secondmenu">
-                  <a href="news/xingyexinwen/" target="_self" title="行业新闻"
+                  <a href="/newsCenter.html" target="_self" title="行业新闻"
                     class="dropdown-item navlist-2 "><span>行业新闻</span></a>
-                  <a href="news/gongsidongtai/" target="_self" title="公司动态"
+                  <a href="/blankPage.html" target="_self" title="公司动态"
                     class="dropdown-item navlist-2 "><span>公司动态</span></a>
-                  <a href="news/changjianwenti/" target="_self" title="常见问题"
+                  <a href="/blankPage.html" target="_self" title="常见问题"
                     class="dropdown-item navlist-2 "><span>常见问题</span></a>
                 </div>
               </li>
               <li class="nav-item ">
-                <a href="contact/" title="联系我们" data-title="联系我们" class="nav-link " target="_self"><span>联系我们</span></a>
+                <a href="/contactUs.html" title="联系我们" data-title="联系我们" class="nav-link "
+                  target="_self"><span>联系我们</span></a>
               </li>
             </ul>
           </div>
@@ -564,7 +597,6 @@
       </div>
     </div>
   </div>
-
 
 
   <!--foot_begin-->

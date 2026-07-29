@@ -144,6 +144,11 @@
       color: #E60000 !important;
     }
 
+    /* 导航下拉菜单 hover 显示 */
+    .head_nav_qilin_16_1_57416 .navlist .nav-item.dropdown:hover > .dropdown-menu {
+      display: block;
+    }
+
     .location_qilin_16_1_57450 .breadcrumb-item a {
       color: #bb0303;
     }
@@ -177,8 +182,8 @@
       background-color: #e60000;
     }
 
-    /* Bullet indicators visible on light/white backgrounds */
-    .banner_qilin_28_1_57417 .uranus .tp-bullet {
+
+    /* Bullet indicators visible on light/white backgrounds .banner_qilin_28_1_57417 .uranus .tp-bullet {
       box-shadow: 0 0 0 2px rgba(0, 0, 0, 0);
     }
 
@@ -194,41 +199,46 @@
       background-color: rgb(0, 0, 0);
     }
 
-    /* Zeus arrows - show only on hover */
     .banner_qilin_28_1_57417 .zeus.tparrows {
       background: rgba(0, 0, 0, 0.3);
       opacity: 0;
       transition: opacity 0.3s ease;
       transform: translateY(-50%);
     }
+
     .banner_qilin_28_1_57417 .rev_slider_wrapper:hover .zeus.tparrows {
       opacity: 1;
     }
-    /* Prevent the inner wrapper from darkening on arrow hover */
+
     .banner_qilin_28_1_57417 .zeus.tparrows:hover .tp-arr-allwrapper {
       opacity: 0 !important;
       transform: scale(0) !important;
-    }
+    } */
+
     .banner_qilin_28_1_57417 .zeus.tparrows:before {
       content: '' !important;
       font-family: none !important;
-      width: 0;
-      height: 0;
+      width: 14px;
+      height: 14px;
       border-style: solid;
+      border-color: #fff;
       position: absolute;
       top: 50%;
+      margin-top: -7px;
     }
+
     .banner_qilin_28_1_57417 .zeus.tparrows.tp-leftarrow:before {
-      left: 40%;
-      margin-top: -10px;
-      border-width: 10px 16px 10px 0;
-      border-color: transparent #fff transparent transparent;
+      left: 50%;
+      margin-left: -4px;
+      border-width: 0 0 2px 2px;
+      transform: rotate(45deg);
     }
+
     .banner_qilin_28_1_57417 .zeus.tparrows.tp-rightarrow:before {
-      left: 45%;
-      margin-top: -10px;
-      border-width: 10px 0 10px 16px;
-      border-color: transparent transparent transparent #fff;
+      left: 50%;
+      margin-left: -10px;
+      border-width: 2px 2px 0 0;
+      transform: rotate(45deg);
     }
   </style>
   <!-- <link href="static/assets/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" /> -->
@@ -240,8 +250,7 @@
           <!-- logo -->
           <div class="navbar-header pull-xs-left">
             <div class="vertical-align-middle">
-              <img src="./picture/logo/pc_logo.png" alt="广东勤微电子有限公司" q-id="1266" q-table="web_site"
-                q-field="logo_pc" />
+              <img src="./picture/logo/pc_logo.png" alt="广东勤微电子有限公司" q-id="1266" q-table="web_site" q-field="logo_pc" />
             </div>
           </div>
           <!-- logo -->
@@ -258,22 +267,23 @@
               </li>
               <li class="nav-item  dropdown m-l-0 ">
                 <a href="/about.html" title="关于我们" data-title="关于我们" class="nav-link  dropdown-toggle dropdown"
-                  data-toggle="dropdown" data-hover="dropdown" target="_self"><span>关于我们</span></a>
+                  data-toggle="dropdown" target="_self"><span>关于我们</span></a>
 
                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-bullet secondmenu">
                   <a href="/about.html" target="_self" title="关于我们"
                     class="dropdown-item navlist-2 "><span>关于我们</span></a>
-                  <a href="/template.html" target="_self" title="企业相册"
-                    class="dropdown-item navlist-2 "><span>企业相册</span></a>
-                  <a href="/template.html" target="_self" title="荣誉资质"
+                  <a href="/teamShowcase.html" target="_self" title="团队风采"
+                    class="dropdown-item navlist-2 "><span>团队风采</span></a>
+                  <a href="/blankPage.html" target="_self" title="荣誉资质"
                     class="dropdown-item navlist-2 "><span>荣誉资质</span></a>
-                  <a href="abouts/feedback/" target="_self" title="在线留言"
+                  <a href="/blankPage.html" target="_self" title="在线留言"
                     class="dropdown-item navlist-2 "><span>在线留言</span></a>
+
                 </div>
               </li>
               <li class="nav-item  dropdown m-l-0 ">
-                <a href="" title="产品中心" data-title="产品中心" class="nav-link  dropdown-toggle dropdown"
-                  data-toggle="dropdown" data-hover="dropdown" target="_self"><span>产品中心</span></a>
+                <a href="/productCenter.html" title="产品中心" data-title="产品中心" class="nav-link  dropdown-toggle dropdown"
+                  data-toggle="dropdown" target="_self"><span>产品中心</span></a>
 
                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-bullet secondmenu">
                   <a href="/sanling01.html" target="_self" title="三菱"
@@ -300,23 +310,24 @@
                 </div>
               </li>
               <li class="nav-item ">
-                <a href="cases/" title="应用参考" data-title="应用参考" class="nav-link " target="_self"><span>应用参考</span></a>
+                <a href="/application.html" title="应用参考" data-title="应用参考" class="nav-link "
+                  target="_self"><span>应用参考</span></a>
               </li>
               <li class="nav-item  dropdown m-l-0 ">
-                <a href="news/" title="新闻资讯" data-title="新闻资讯" class="nav-link  dropdown-toggle dropdown"
-                  data-toggle="dropdown" data-hover="dropdown" target="_self"><span>新闻资讯</span></a>
-
+                <a href="/newsCenter.html" title="新闻中心" data-title="新闻中心" class="nav-link  dropdown-toggle dropdown"
+                  data-toggle="dropdown" target="_self"><span>新闻中心</span></a>
                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-bullet secondmenu">
-                  <a href="news/xingyexinwen/" target="_self" title="行业新闻"
+                  <a href="/newsCenter.html" target="_self" title="行业新闻"
                     class="dropdown-item navlist-2 "><span>行业新闻</span></a>
-                  <a href="news/gongsidongtai/" target="_self" title="公司动态"
+                  <a href="/blankPage.html" target="_self" title="公司动态"
                     class="dropdown-item navlist-2 "><span>公司动态</span></a>
-                  <a href="news/changjianwenti/" target="_self" title="常见问题"
+                  <a href="/blankPage.html" target="_self" title="常见问题"
                     class="dropdown-item navlist-2 "><span>常见问题</span></a>
                 </div>
               </li>
               <li class="nav-item ">
-                <a href="contact/" title="联系我们" data-title="联系我们" class="nav-link " target="_self"><span>联系我们</span></a>
+                <a href="/contactUs.html" title="联系我们" data-title="联系我们" class="nav-link "
+                  target="_self"><span>联系我们</span></a>
               </li>
             </ul>
           </div>
@@ -355,7 +366,6 @@
           </li>
         </ul>
         <div class="tp-bannertimer" style="height: 6px; background-color: rgba(0, 0, 0, 0.14902);top:0px;"></div>
-
       </div>
     </div>
   </div><!-- head_end -->
@@ -366,63 +376,17 @@
   <div class="foot_nav_qilin_11_2_57413 border-top1 text-xs-center" p-id="57413" m-type="foot_nav">
     <div class="container">
       <div class="col-lg-8 col-md-12 nav-list">
-        <!--  			  			<div class="col-md-3 col-sm-12 list">
-  				<h4 class="m-t-0">
-  					<a href="abouts/" title="关于我们" class="btn-collapse" target="_self">关于我们</a>
-  					<i class="fa fa-chevron-down"></i>
-  				</h4>
-  				<ul class="ulstyle  m-b-0" id="list-41273">
-  					  					<li> <a href="abouts/about/" title="关于我们" target="_self">关于我们</a> </li>
-  					  					<li> <a href="abouts/album/" title="企业相册" target="_self">企业相册</a> </li>
-  					  					<li> <a href="abouts/honor/" title="荣誉资质" target="_self">荣誉资质</a> </li>
-  					  					<li> <a href="abouts/feedback/" title="在线留言" target="_self">在线留言</a> </li>
-  					  				</ul>
-  			</div>
-  			  			<div class="col-md-3 col-sm-12 list">
-  				<h4 class="m-t-0">
-  					<a href="product/" title="产品中心" class="btn-collapse" target="_self">产品中心</a>
-  					<i class="fa fa-chevron-down"></i>
-  				</h4>
-  				<ul class="ulstyle  m-b-0" id="list-41273">
-  					  					<li> <a href="product/taiketianrun/" title="亿塔" target="_self">亿塔</a> </li>
-  					  					<li> <a href="product/Maplesemi/" title="美浦森" target="_self">美浦森</a> </li>
-  					  					<li> <a href="product/longteng/" title="优优" target="_self">优优</a> </li>
-  					  					<li> <a href="index.php?c=category&id=28" title="巨风" target="_self">巨风</a> </li>
-  					  					<li> <a href="product/APM/" title="永源微" target="_self">永源微</a> </li>
-  					  					<li> <a href="index.php?c=category&id=27" title="江浩电子" target="_self">江浩电子</a> </li>
-  					  					<li> <a href="product/diotec/" title="DIOTEC" target="_self">DIOTEC</a> </li>
-  					  					<li> <a href="product/haoou/" title="毫欧" target="_self">毫欧</a> </li>
-  					  					<li> <a href="index.php?c=category&id=30" title="三垦" target="_self">三垦</a> </li>
-  					  					<li> <a href="index.php?c=category&id=31" title="新洁能" target="_self">新洁能</a> </li>
-  					  					<li> <a href="index.php?c=category&id=32" title="优优" target="_self">优优</a> </li>
-  					  					<li> <a href="index.php?c=category&id=33" title="比亚迪" target="_self">比亚迪</a> </li>
-  					  					<li> <a href="product/AGMSEMI/" title="丽隽PIP" target="_self">丽隽PIP</a> </li>
-  					  					<li> <a href="product/luxing/" title="数明" target="_self">数明</a> </li>
-  					  				</ul>
-  			</div>
-  			  			<div class="col-md-3 col-sm-12 list">
-  				<h4 class="m-t-0">
-  					<a href="news/" title="新闻资讯" class="btn-collapse" target="_self">新闻资讯</a>
-  					<i class="fa fa-chevron-down"></i>
-  				</h4>
-  				<ul class="ulstyle  m-b-0" id="list-41273">
-  					  					<li> <a href="news/xingyexinwen/" title="行业新闻" target="_self">行业新闻</a> </li>
-  					  					<li> <a href="news/gongsidongtai/" title="公司动态" target="_self">公司动态</a> </li>
-  					  					<li> <a href="news/changjianwenti/" title="常见问题" target="_self">常见问题</a> </li>
-  					  				</ul>
-  			</div>
-  			 -->
 
         <div class="col-md-2 col-sm-12 list">
           <h4 class="m-t-0">
-            <a href="abouts/" title="关于我们" class="btn-collapse" target="_self">关于我们</a>
+            <a href="" title="公司简介" class="btn-collapse" target="_self">公司简介</a>
             <i class="fa fa-chevron-down"></i>
           </h4>
           <ul class="ulstyle  m-b-0" id="list-41273">
-            <li> <a href="abouts/about/" title="关于我们" target="_self">关于我们</a> </li>
-            <li> <a href="abouts/album/" title="企业相册" target="_self">企业相册</a> </li>
-            <li> <a href="abouts/honor/" title="荣誉资质" target="_self">荣誉资质</a> </li>
-            <li> <a href="abouts/feedback/" title="在线留言" target="_self">在线留言</a> </li>
+            <li> <a href="/about.html" title="关于我们" target="_self">关于我们</a> </li>
+            <li> <a href="/teamShowcase.html" title="团队风采" target="_self">团队风采</a> </li>
+            <li> <a href="/blankPage.html" title="荣誉资质" target="_self">荣誉资质</a> </li>
+            <li> <a href="/blankPage.html" title="在线留言" target="_self">在线留言</a> </li>
           </ul>
         </div>
 
@@ -457,12 +421,6 @@
             <li> <a href="/yita01.html" title="亿塔" target="_self">亿塔</a> </li>
             <li> <a href="/yangjie01.html" title="杨杰" target="_self">杨杰</a> </li>
             <li> <a href="/youyou01.html" title="优优" target="_self">优优</a> </li>
-
-            <!-- <li> <a href="product/APM/" title="永源微" target="_self">永源微</a> </li>
-            <li> <a href="index.php?c=category&amp;id=27" title="江浩电子" target="_self">江浩电子</a>
-            </li>
-            <li> <a href="product/diotec/" title="DIOTEC" target="_self">DIOTEC</a> </li>
-            <li> <a href="product/haoou/" title="毫欧" target="_self">毫欧</a> </li> -->
           </ul>
         </div>
 
@@ -470,17 +428,15 @@
 
         <div class="col-md-2 col-sm-12 list">
           <h4 class="m-t-0">
-            <a href="news/" title="新闻资讯" class="btn-collapse" target="_self">新闻资讯</a>
+            <a href="/newsCenter.html" title="新闻中心" class="btn-collapse" target="_self">新闻中心</a>
             <i class="fa fa-chevron-down"></i>
           </h4>
           <ul class="ulstyle  m-b-0" id="list-41273">
-            <li> <a href="news/xingyexinwen/" title="行业新闻" target="_self">行业新闻</a> </li>
-            <li> <a href="news/gongsidongtai/" title="公司动态" target="_self">公司动态</a> </li>
-            <li> <a href="news/changjianwenti/" title="常见问题" target="_self">常见问题</a> </li>
+            <li> <a href="/newsCenter.html" title="行业新闻" target="_self">行业新闻</a> </li>
+            <li> <a href="/blankPage.html" title="公司动态" target="_self">公司动态</a> </li>
+            <li> <a href="/blankPage.html" title="常见问题" target="_self">常见问题</a> </li>
           </ul>
         </div>
-
-
 
         <div class="col-md-2 col-sm-12 list">
           <h4 class="m-t-0"> <a title="关注我们" class="btn-collapse" style="text-align: left;">关注我们</a> <i
@@ -529,68 +485,6 @@
       </div>
     </div>
   </footer>
-  <div class="foot_info_qilin_11_2_57414_bottom text-xs-center " p-id="57414" data-bg="#3e8378|#f43c48|1"
-    data-ifbotc="#3e8378" style="background: rgb(62, 131, 120);">
-    <div class="main">
-      <div class="">
-        <a href="tel:13723595064" class="item" target="_blank"> <i class="fa fa-phone"></i> <span q-id="895919"
-            q-table="ui_config" q-field="uip_value" class="editable-click">电话咨询</span> </a>
-      </div>
-      <div class="">
-        <a href="/product/" class="item" target="_blank"> <i class="fa fa-shopping-cart"></i>
-          <span q-id="895920" q-table="ui_config" q-field="uip_value" class="editable-click">产品中心</span> </a>
-      </div>
-      <div class="">
-        <a href="/news/" class="item" target="_blank"> <i class="fa fa-paste"></i> <span q-id="895921"
-            q-table="ui_config" q-field="uip_value" class="editable-click">新闻资讯</span> </a>
-      </div>
-      <div class="">
-        <a href="mqqwpa://im/chat?chat_type=wpa&amp;uin=2462485023&amp;version=1&amp;src_type=web&amp;web_src="
-          class="item" target="_blank"> <i class="fa fa-qq"></i> <span q-id="2462485023" q-table="ui_config"
-            q-field="uip_value" class="editable-click">QQ客服</span> </a>
-      </div>
-    </div>
-  </div>
-  <a href="#" class="cd-is-visible cd-fade-out back_top_qilin_36_1_57415 cd-top" hidden="" p-id="57415"
-    m-type="nocontent "> <i class="fa fa-angle-up" aria-hidden="true"></i> </a>
-
-  <div id="onlinebox" class="onlinebox min" m-type="online" m-id="noset"
-    style="position: absolute; top: 100px; bottom: auto; right: 10px; left: auto;">
-    <div class="onlinebox-open" id="onlinebox-open" style="background:#46b0ab;">
-      <i class="fa fa-comments-o"></i>
-    </div>
-    <div class="onlinebox-box font-size-14">
-      <div class="onlinebox-top" style="background:#46b0ab;">
-        <div class="onlinebox-top-btn">
-          <a href="javascript:;" class="onlinebox-close" title="">x</a>
-          <a href="javascript:;" class="onlinebox-min">-</a>
-        </div>
-        <h4 class="h5">在线交流</h4>
-      </div>
-      <div class="onlinebox-center list-group">
-
-        <li class="list-group-item border-none">
-          <p class="met_qq list-group-item-text mb-0">
-            李小姐 Emily 13723595064 </p>
-        </li>
-        <li class="list-group-item border-none">
-          <p class="met_qq list-group-item-text mb-0">
-            电话：<br /><a href="tel:0769-82828396">0769-82828396</a>
-          </p>
-        </li>
-        <li class="list-group-item border-none">
-          <p class="met_qq list-group-item-text mb-0">
-            Email：<br /><a href="mailto:lily_hcfy@163.com">lily_hcfy@163.com</a>
-          </p>
-        </li>
-        <li class="list-group-item border-none">
-          <p class="met_qq list-group-item-text mb-0">
-            地址：<br />东莞市常平镇东征路251号1栋933室 </p>
-        </li>
-
-      </div>
-    </div>
-  </div>
 
   <script>
     function count_User(userAgent) {
@@ -684,97 +578,8 @@
 
   <script src="static/site/pc/js/basic.js"></script>
   <script src="static/site/pc/js/index.js"></script>
-  <!-- Revolution Slider 5.x Extension Stubs (loaded synchronously before .revolution() init) -->
-  <script src="static/site/pc/js/revolution.extension.video.min.js"></script>
-  <script src="static/site/pc/js/revolution.extension.slideanims.min.js"></script>
-  <script src="static/site/pc/js/revolution.extension.navigation.min.js"></script>
-  <script src="static/site/pc/js/revolution.extension.parallax.min.js"></script>
-  <script src="static/site/pc/js/revolution.extension.layeranimation.min.js"></script>
-  <script src="static/site/pc/js/revolution.extension.actions.min.js"></script>
-  <script src="static/site/pc/js/revolution.extension.kenburn.min.js"></script>
-  <script src="static/site/pc/js/revolution.extension.migration.min.js"></script>
-  <script src="static/site/pc/js/revolution.extension.carousel.min.js"></script>
   <script src="static/site/pc/js/lang_json_cn.js"></script>
-  <script>
-    // Diagnostic: check slider state after initialization
-    // Hook revolution slider events early
-    (function () {
-      var tpBanner = document.querySelector('.banner_qilin_28_1_57417 .tp-banner');
-      if (tpBanner && window.jQuery) {
-        var events = [
-          'revolution.slide.onbeforeswap',
-          'revolution.slide.onchange',
-          'revolution.slide.onafterswap',
-          'revolution.slide.onloaded',
-          'revolution.slide.slideatend',
-          'revolution.slide.onstop',
-          'revolution.slide.onpause',
-          'revolution.slide.onresume'
-        ];
-        jQuery(tpBanner).on(events.join(' '), function (e, data) {
-          var info = '';
-          if (data && data.slideIndex) info = ' slideIndex=' + data.slideIndex;
-          console.log('[HOOK]', e.type + info, '| time:', Date.now() % 100000);
-        });
-        console.log('[HOOK] Event listeners registered');
-      }
-    })();
 
-    setTimeout(function () {
-      console.log('[DIAG] === Slider Diagnostic (after 2s) ===');
-      console.log('[DIAG] punchgs defined:', typeof punchgs !== 'undefined');
-      console.log('[DIAG] jQuery.fn.revolution defined:', typeof jQuery.fn.revolution !== 'undefined');
-
-      var wrapper = document.querySelector('.banner_qilin_28_1_57417 .rev_slider_wrapper');
-      console.log('[DIAG] .rev_slider_wrapper found:', !!wrapper);
-      if (wrapper) {
-        console.log('[DIAG] wrapper height:', wrapper.offsetHeight);
-        console.log('[DIAG] wrapper width:', wrapper.offsetWidth);
-      }
-
-      var tpBanner = document.querySelector('.banner_qilin_28_1_57417 .tp-banner');
-      console.log('[DIAG] .tp-banner found:', !!tpBanner);
-      if (tpBanner) {
-        console.log('[DIAG] tp-banner height:', tpBanner.offsetHeight);
-        console.log('[DIAG] has class revslider-initialised:', tpBanner.classList.contains('revslider-initialised'));
-        console.log('[DIAG] has class tp-simpleresponsive:', tpBanner.classList.contains('tp-simpleresponsive'));
-      }
-
-      var bgImgs = document.querySelectorAll('.banner_qilin_28_1_57417 .tp-bgimg');
-      console.log('[DIAG] .tp-bgimg count:', bgImgs.length);
-      bgImgs.forEach(function (el, i) {
-        var bg = el.style.backgroundImage;
-        console.log('[DIAG] .tp-bgimg[' + i + '] bg:', bg ? bg.substring(0, 100) : 'none');
-        console.log('[DIAG] .tp-bgimg[' + i + '] opacity:', el.style.opacity);
-        console.log('[DIAG] .tp-bgimg[' + i + '] visibility:', el.style.visibility);
-      });
-
-      var slotholders = document.querySelectorAll('.banner_qilin_28_1_57417 .slotholder');
-      console.log('[DIAG] .slotholder count:', slotholders.length);
-
-      var activeSlide = document.querySelector('.banner_qilin_28_1_57417 .active-revslide');
-      console.log('[DIAG] .active-revslide found:', !!activeSlide);
-
-      var nextSlide = document.querySelector('.banner_qilin_28_1_57417 .next-revslide');
-      var processingSlide = document.querySelector('.banner_qilin_28_1_57417 .processing-revslide');
-      console.log('[DIAG] .next-revslide found:', !!nextSlide);
-      console.log('[DIAG] .processing-revslide found:', !!processingSlide);
-
-      // Check ALL LI classes
-      var allLi = document.querySelectorAll('.banner_qilin_28_1_57417 .tp-revslider-slidesli');
-      console.log('[DIAG] total LIs:', allLi.length);
-      allLi.forEach(function (li, i) {
-        console.log('[DIAG] LI[' + i + '] classes:', li.className);
-        console.log('[DIAG] LI[' + i + '] style.opacity:', li.style.opacity);
-        console.log('[DIAG] LI[' + i + '] computed opacity:', window.getComputedStyle(li).opacity);
-      });
-
-      var loader = document.querySelector('.banner_qilin_28_1_57417 .tp-loader');
-      if (loader) {
-        console.log('[DIAG] .tp-loader display:', window.getComputedStyle(loader).display);
-      }
-    }, 2000);
-  </script>
 </body>
 
 </html>

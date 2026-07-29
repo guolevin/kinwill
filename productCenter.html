@@ -13,10 +13,10 @@
     content="广东勤微电子有限公司一家专业从事电子元器件类产品销售及提供增值服务的高科技公司,主营品牌有:IGBT单管,IPM模块,电机驱动芯片,IGBT模块,比亚迪微电子,成启半导体,龙腾半导体,三垦电气,三菱电机,数明半导体,纳芯微等,服务热线:13728165816."
     name="description" />
   <meta name="generator" content="Becauses" data-variable="" data-user_name="" />
-  <link rel="stylesheet" type="text/css" href="http://www.hechuangfy.com/static/site/pc/css/basic.css" />
-  <link rel="stylesheet" type="text/css" href="http://www.hechuangfy.com/static/site/pc/css/index.css" />
+  <link rel="stylesheet" type="text/css" href="static/site/pc/css/basic.css" />
+  <link rel="stylesheet" type="text/css" href="static/site/pc/css/index.css" />
   <!--[if lte IE 9]>
-		<script src="http://www.hechuangfy.com/static/site/pc/js/lteie9.js"></script>
+		<script src="static/site/pc/js/lteie9.js"></script>
 		<![endif]-->
 </head>
 <!--[if lte IE 8]>
@@ -31,19 +31,18 @@
 
   <!--head_begin-->
   <!-- 系统关键js(所有自建模板必须引用) -->
-  <script
-    type="text/javascript">var assets_path = 'http://www.hechuangfy.com/static/assets/'; var is_mobile_cms = '';</script>
-  <script src="http://www.hechuangfy.com/api/language/zh-cn/lang.js" type="text/javascript"></script>
-  <script src="http://www.hechuangfy.com/static/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
-  <!-- <script src="http://www.hechuangfy.com/static/assets/layer/layer.js" type="text/javascript"></script> -->
-  <script src="http://www.hechuangfy.com/static/assets/js/cms.js" type="text/javascript"></script>
+  <script type="text/javascript">var assets_path = 'static/assets/'; var is_mobile_cms = '';</script>
+  <script src="api/language/zh-cn/lang.js" type="text/javascript"></script>
+  <script src="static/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+  <!-- <script src="static/assets/layer/layer.js" type="text/javascript"></script> -->
+  <script src="static/assets/js/cms.js" type="text/javascript"></script>
   <!-- 系统关键js结束 -->
   <!-- 蜘蛛监控 -->
   <script language="JavaScript">
     // 需要jquery的支持
     $.ajax({
       type: "get",
-      url: "http://www.hechuangfy.com/index.php?s=spider&title=" + document.title,
+      url: "index.php?s=spider&title=" + document.title,
       dataType: "jsonp"
     });
   </script>
@@ -173,6 +172,143 @@
       border-color: #e60000;
       background-color: #e60000;
     }
+
+    /* ========== 产品列表样式优化 ========== */
+
+    /* 卡片间距 */
+    .product_list_page_qilin_11_2_57435 .met-product-list {
+      gap: 20px;
+    }
+
+    .product_list_page_qilin_11_2_57435 .index-product-item {
+      padding: 0;
+      margin-bottom: 10px;
+    }
+
+    .product_list_page_qilin_11_2_57435 .widget {
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #e8e8e8;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+      transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .product_list_page_qilin_11_2_57435 .widget:hover {
+      border-color: #e60000;
+    }
+
+    .product_list_page_qilin_11_2_57435 .widget:hover {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    /* 图片容器 - 覆盖框架 cover 样式，统一高度 */
+    .product_list_page_qilin_11_2_57435 .widget-header.cover {
+      overflow: hidden;
+      position: relative;
+      padding-top: 0 !important;
+      height: 240px;
+      background: #fafafa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .product_list_page_qilin_11_2_57435 .widget-header.cover a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* 图片完整显示 */
+    .product_list_page_qilin_11_2_57435 .widget-header.cover .product-image {
+      position: relative !important;
+      top: auto !important;
+      left: auto !important;
+      max-width: 100%;
+      max-height: 100%;
+      width: auto !important;
+      height: auto !important;
+      object-fit: contain;
+      transition: transform 0.4s ease;
+      display: block;
+    }
+
+    .product_list_page_qilin_11_2_57435 .widget:hover .product-image {
+      transform: scale(1.08);
+    }
+
+    /* 标题底部居中对齐 */
+    .product_list_page_qilin_11_2_57435 .widget-title {
+      text-align: center;
+    }
+
+    .product_list_page_qilin_11_2_57435 .widget-title a {
+      position: relative;
+      display: inline-block;
+    }
+
+    .product_list_page_qilin_11_2_57435 .widget-title a span {
+      font-size: 17px;
+      font-weight: 500;
+      transition: opacity 0.3s ease;
+    }
+
+    /* hover 时产品名称 → 查看详情 */
+    .product_list_page_qilin_11_2_57435 .widget:hover .widget-title a span {
+      opacity: 0;
+    }
+
+    .product_list_page_qilin_11_2_57435 .widget-title a::after {
+      content: '查看详情';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      text-align: center;
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      color: #e60000;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .product_list_page_qilin_11_2_57435 .widget:hover .widget-title a::after {
+      opacity: 1;
+    }
+
+    /* 导航下拉菜单 hover 显示 */
+    .head_nav_qilin_16_1_57416 .navlist .nav-item.dropdown:hover>.dropdown-menu {
+      display: block;
+    }
+
+    .banner_qilin_28_1_57417 .zeus.tparrows:before {
+      content: '' !important;
+      font-family: none !important;
+      width: 14px;
+      height: 14px;
+      border-style: solid;
+      border-color: #fff;
+      position: absolute;
+      top: 50%;
+      margin-top: -7px;
+    }
+
+    .banner_qilin_28_1_57417 .zeus.tparrows.tp-leftarrow:before {
+      left: 50%;
+      margin-left: -4px;
+      border-width: 0 0 2px 2px;
+      transform: rotate(45deg);
+    }
+
+    .banner_qilin_28_1_57417 .zeus.tparrows.tp-rightarrow:before {
+      left: 50%;
+      margin-left: -10px;
+      border-width: 2px 2px 0 0;
+      transform: rotate(45deg);
+    }
   </style>
   <header class="met-head navbar-fixed-top" p-id="57416" m-type="head_nav" met-imgmask="">
     <nav class="head_nav navbar navbar-default box-shadow-none head_nav_qilin_16_1_57416">
@@ -181,8 +317,7 @@
           <!-- logo -->
           <div class="navbar-header pull-xs-left">
             <div class="vertical-align-middle">
-              <img src="./picture/logo/pc_logo.png" alt="广东勤微电子有限公司" q-id="1266" q-table="web_site"
-                q-field="logo_pc" />
+              <img src="./picture/logo/pc_logo.png" alt="广东勤微电子有限公司" q-id="1266" q-table="web_site" q-field="logo_pc" />
             </div>
           </div>
           <!-- logo -->
@@ -195,28 +330,28 @@
             id="head_nav_qilin_16_1_57416-collapse">
             <ul class="nav navbar-nav navlist">
               <li class="nav-item ">
-                <a href="http://www.hechuangfy.com/" title="首页" data-title="首页" class="nav-link  active "
-                  target="_self"><span>首页</span></a>
+                <a href="" title="首页" data-title="首页" class="nav-link " target="_self"><span>首页</span></a>
               </li>
               <li class="nav-item  dropdown m-l-0 ">
-                <a href="http://www.hechuangfy.com/abouts/" title="关于我们" data-title="关于我们"
-                  class="nav-link  dropdown-toggle dropdown" data-toggle="dropdown" data-hover="dropdown"
-                  target="_self"><span>关于我们</span></a>
+                <a href="/about.html" title="关于我们" data-title="关于我们" class="nav-link  dropdown-toggle dropdown"
+                  data-toggle="dropdown" target="_self"><span>关于我们</span></a>
 
                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-bullet secondmenu">
-                  <a href="http://www.hechuangfy.com/abouts/about/" target="_self" title="关于我们"
+                  <a href="/about.html" target="_self" title="关于我们"
                     class="dropdown-item navlist-2 "><span>关于我们</span></a>
-                  <a href="http://www.hechuangfy.com/abouts/album/" target="_self" title="企业相册"
-                    class="dropdown-item navlist-2 "><span>企业相册</span></a>
-                  <a href="http://www.hechuangfy.com/abouts/honor/" target="_self" title="荣誉资质"
+                  <a href="/teamShowcase.html" target="_self" title="团队风采"
+                    class="dropdown-item navlist-2 "><span>团队风采</span></a>
+                  <a href="/blankPage.html" target="_self" title="荣誉资质"
                     class="dropdown-item navlist-2 "><span>荣誉资质</span></a>
-                  <a href="http://www.hechuangfy.com/abouts/feedback/" target="_self" title="在线留言"
+                  <a href="/blankPage.html" target="_self" title="在线留言"
                     class="dropdown-item navlist-2 "><span>在线留言</span></a>
+
                 </div>
               </li>
               <li class="nav-item  dropdown m-l-0 ">
-                <a href="" title="产品中心" data-title="产品中心" class="nav-link  dropdown-toggle dropdown"
-                  data-toggle="dropdown" data-hover="dropdown" target="_self"><span>产品中心</span></a>
+                <a href="/productCenter.html" title="产品中心" data-title="产品中心"
+                  class="nav-link  active dropdown-toggle dropdown" data-toggle="dropdown"
+                  target="_self"><span>产品中心</span></a>
 
                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-bullet secondmenu">
                   <a href="/sanling01.html" target="_self" title="三菱"
@@ -243,25 +378,23 @@
                 </div>
               </li>
               <li class="nav-item ">
-                <a href="http://www.hechuangfy.com/cases/" title="应用参考" data-title="应用参考" class="nav-link "
+                <a href="/application.html" title="应用参考" data-title="应用参考" class="nav-link "
                   target="_self"><span>应用参考</span></a>
               </li>
               <li class="nav-item  dropdown m-l-0 ">
-                <a href="http://www.hechuangfy.com/news/" title="新闻资讯" data-title="新闻资讯"
-                  class="nav-link  dropdown-toggle dropdown" data-toggle="dropdown" data-hover="dropdown"
-                  target="_self"><span>新闻资讯</span></a>
-
+                <a href="/newsCenter.html" title="新闻中心" data-title="新闻中心" class="nav-link  dropdown-toggle dropdown"
+                  data-toggle="dropdown" target="_self"><span>新闻中心</span></a>
                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-bullet secondmenu">
-                  <a href="http://www.hechuangfy.com/news/xingyexinwen/" target="_self" title="行业新闻"
+                  <a href="/newsCenter.html" target="_self" title="行业新闻"
                     class="dropdown-item navlist-2 "><span>行业新闻</span></a>
-                  <a href="http://www.hechuangfy.com/news/gongsidongtai/" target="_self" title="公司动态"
+                  <a href="/blankPage.html" target="_self" title="公司动态"
                     class="dropdown-item navlist-2 "><span>公司动态</span></a>
-                  <a href="http://www.hechuangfy.com/news/changjianwenti/" target="_self" title="常见问题"
+                  <a href="/blankPage.html" target="_self" title="常见问题"
                     class="dropdown-item navlist-2 "><span>常见问题</span></a>
                 </div>
               </li>
               <li class="nav-item ">
-                <a href="http://www.hechuangfy.com/contact/" title="联系我们" data-title="联系我们" class="nav-link "
+                <a href="/contactUs.html" title="联系我们" data-title="联系我们" class="nav-link "
                   target="_self"><span>联系我们</span></a>
               </li>
             </ul>
@@ -279,32 +412,27 @@
         eco_bullets_offset_vert="20" data-alias="showcase-carousel" data-version="5.2.5.4">
         <ul class="banner-ul">
           <li data-transition="papercut" data-slotamount="random" data-masterspeed="1000"
-            data-thumb="http://www.hechuangfy.com/uploadfile/202508/a40814bb9b0a1a9.jpg" data-saveperformance="on"
-            data-title="" data-speed="9000">
-            <img src="http://www.hechuangfy.com/uploadfile/202508/a40814bb9b0a1a9.jpg" alt="封面" title="封面"
-              data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-height="0|0|0"
-              class="cover-image editable-click" />
+            data-thumb="uploadfile/202508/a40814bb9b0a1a9.jpg" data-saveperformance="on" data-title=""
+            data-speed="9000">
+            <img src="uploadfile/202508/a40814bb9b0a1a9.jpg" alt="封面" title="封面" data-bgposition="center center"
+              data-bgfit="cover" data-bgrepeat="no-repeat" data-height="0|0|0" class="cover-image editable-click" />
           </li>
           <li data-transition="papercut" data-slotamount="random" data-masterspeed="1000"
-            data-thumb="http://www.hechuangfy.com/uploadfile/202108/f9ec06b367283ad.jpg" data-saveperformance="on"
-            data-title="" data-speed="9000">
-            <img src="http://www.hechuangfy.com/uploadfile/202108/f9ec06b367283ad.jpg" alt="轮播图2" title="轮播图2"
-              data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-height="0|0|0"
-              class="cover-image editable-click" />
+            data-thumb="uploadfile/202108/f9ec06b367283ad.jpg" data-saveperformance="on" data-title=""
+            data-speed="9000">
+            <img src="uploadfile/202108/f9ec06b367283ad.jpg" alt="轮播图2" title="轮播图2" data-bgposition="center center"
+              data-bgfit="cover" data-bgrepeat="no-repeat" data-height="0|0|0" class="cover-image editable-click" />
           </li>
           <li data-transition="papercut" data-slotamount="random" data-masterspeed="1000"
-            data-thumb="http://www.hechuangfy.com/uploadfile/202108/13664d272bc9d.jpg" data-saveperformance="on"
-            data-title="" data-speed="9000">
-            <img src="http://www.hechuangfy.com/uploadfile/202108/13664d272bc9d.jpg" alt="轮播图1" title="轮播图1"
-              data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-height="0|0|0"
-              class="cover-image editable-click" />
+            data-thumb="uploadfile/202108/13664d272bc9d.jpg" data-saveperformance="on" data-title="" data-speed="9000">
+            <img src="uploadfile/202108/13664d272bc9d.jpg" alt="轮播图1" title="轮播图1" data-bgposition="center center"
+              data-bgfit="cover" data-bgrepeat="no-repeat" data-height="0|0|0" class="cover-image editable-click" />
           </li>
           <li data-transition="papercut" data-slotamount="random" data-masterspeed="1000"
-            data-thumb="http://www.hechuangfy.com/uploadfile/202109/f3f1e8399947168.png" data-saveperformance="on"
-            data-title="" data-speed="9000">
-            <img src="http://www.hechuangfy.com/uploadfile/202109/f3f1e8399947168.png" alt="轮播图4" title="轮播图4"
-              data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-height="0|0|0"
-              class="cover-image editable-click" />
+            data-thumb="uploadfile/202109/f3f1e8399947168.png" data-saveperformance="on" data-title=""
+            data-speed="9000">
+            <img src="uploadfile/202109/f3f1e8399947168.png" alt="轮播图4" title="轮播图4" data-bgposition="center center"
+              data-bgfit="cover" data-bgrepeat="no-repeat" data-height="0|0|0" class="cover-image editable-click" />
           </li>
         </ul>
         <div class="tp-bannertimer" style="height: 6px; background-color: rgba(0, 0, 0, 0.14902);top:0px;"></div>
@@ -312,7 +440,7 @@
     </div>
   </div><!-- head_end -->
 
-  <div class="product_list_page_qilin_11_2_57435 met-product animsition type-1" p-id="57435">
+  <div class="product_list_page_qilin_11_2_57435 met-product animsition type-1" p-id="57435" style="margin: 20px 0;">
     <div class="container">
       <div class="row">
         <ul
@@ -329,10 +457,6 @@
                 <a href="http://www.hechuangfy.com/product/taiketianrun/" title="成启半导体" target="_self">
                   <span style="">成启半导体</span>
                 </a>
-                <!-- <p>成启半导体半导体科技（北京）有限公司(Global Power Technology)是中国碳化硅（SiC）功率器件产业化的倡导者之一。成启半导体致力于中国半导体功率器件制造产业的发展，并向全球功率器件消费者提供优质的半导体功率器件产品和专业服务。 成启半导体总部坐落于中国北京中关村东升科技园北领地内，园区环境优雅。成启半导体在北京拥有一座完整的半导体工艺晶圆厂，可在4/6英寸SiC晶圆上实现半导体功率器...</p> -->
-                <span class="btn-detail">
-                  <a href="http://www.hechuangfy.com/product/taiketianrun/" title="成启半导体" target="_self">查看详情</a>
-                </span>
                 <p class="price m-b-0 m-t-5"></p>
               </h4>
             </div>
@@ -348,10 +472,6 @@
                 <a href="http://www.hechuangfy.com/product/Maplesemi/" title="比亚迪微电子" target="_self">
                   <span style="">比亚迪微电子</span>
                 </a>
-                <!-- <p>比亚迪微电子半导体成立于2014年，总部位于深圳市宝安区，在深圳，上海均设有研发中心。是一家集研发、设计、生产、销售和服务为一体的完整型产业链公司，国家级高新企业。公司产品包括中大功率场效应管（低压到高压全系列产品，Trench MOS/SGT MOS/Super Junction MOS/ Planar MOS），SiC 二极管、SIC MOSFET等系列产品。 其技术和科研人员在产品研发和生产制程方...</p> -->
-                <span class="btn-detail">
-                  <a href="http://www.hechuangfy.com/product/Maplesemi/" title="比亚迪微电子" target="_self">查看详情</a>
-                </span>
                 <p class="price m-b-0 m-t-5"></p>
               </h4>
             </div>
@@ -367,10 +487,6 @@
                 <a href="http://www.hechuangfy.com/product/longteng/" title="龙腾半导体" target="_self">
                   <span style="">龙腾半导体</span>
                 </a>
-                <!-- <p>龙腾半导体半导体股份有限公司是一家致力于新型功率半导体器件研发、生产、销售及服务的高新技术企业。公司拥有陕西省首条8英寸功率器件生产线，为全省首家集设计、研发、生产、制造、测试为一体的半导体全产业链企业，公司自成立以来，便以推动高端功率器件国产化进程为己任，将技术创新视为企业发展第一动力，申请两百余项核心技术专利;制定超结MOSFET国家行业标准，建有一流的功率器件测试应用中心，专注提供高效、可靠、安全...</p> -->
-                <span class="btn-detail">
-                  <a href="http://www.hechuangfy.com/product/longteng/" title="龙腾半导体" target="_self">查看详情</a>
-                </span>
                 <p class="price m-b-0 m-t-5"></p>
               </h4>
             </div>
@@ -387,10 +503,6 @@
                 <a href="http://www.hechuangfy.com/index.php?c=category&id=28" title="三菱电机" target="_self">
                   <span style="">三菱电机</span>
                 </a>
-                <!-- <p>广东三菱电机半导体有限公司（又名：三菱电机芯），是一家专注服务于大家电、工控及车载系统市场，拥有自主芯片研发能力及完整的知识产权，是国内唯一一家，国际第三家有能力提供整套功率半导体方案的高新技术企业。</p> -->
-                <span class="btn-detail">
-                  <a href="http://www.hechuangfy.com/index.php?c=category&id=28" title="三菱电机" target="_self">查看详情</a>
-                </span>
                 <p class="price m-b-0 m-t-5"></p>
               </h4>
             </div>
@@ -407,10 +519,6 @@
                 <a href="http://www.hechuangfy.com/product/APM/" title="无锡新洁能" target="_self">
                   <span style="">无锡新洁能</span>
                 </a>
-                <!-- <p>无锡新洁能电子，创立于2017年，前身为台湾汉磊科技，全资子公司香港艾柏霖科技有限公司的功率器件事业部。 目前无锡新洁能电子科技有限公司，对外合投4条封装线：TO252两条、TO-252-4L、SOP-8、TO263-6L。拥有两个芯片研发团队，和4个晶元流片厂流片产能。产品线规划从MOSFET 到桥驱Driver，目前无锡新洁能电子实现了从产品设计、晶元流片、封测制作、产品方案应用、设计销售等全产业链整合。...</p> -->
-                <span class="btn-detail">
-                  <a href="http://www.hechuangfy.com/product/APM/" title="无锡新洁能" target="_self">查看详情</a>
-                </span>
                 <p class="price m-b-0 m-t-5"></p>
               </h4>
             </div>
@@ -427,10 +535,6 @@
                 <a href="http://www.hechuangfy.com/index.php?c=category&id=27" title="优优电容器" target="_self">
                   <span style="">优优电容器</span>
                 </a>
-                <!-- <p>公司2003年创建于中国深圳，历经20年现已发展成一家集焊片式电容、螺栓电容、引线电容、贴片电容、固态电容、薄膜电容、固液混合电容、超级电容及腐蚀箔、化成箔设计、研发、生产销售为一体的国家级专精特新小曰人企业、国家级高新技术企业、深圳500强企业、中国电子行业百强企业、广东省制造业单项冠军产品、国家知识产权优势企业、广东省优秀知识产权示范企业、深圳市知名企业、四星级绿色工厂、国家级绿色供应链管理企...</p> -->
-                <span class="btn-detail">
-                  <a href="http://www.hechuangfy.com/index.php?c=category&id=27" title="优优电容器" target="_self">查看详情</a>
-                </span>
                 <p class="price m-b-0 m-t-5"></p>
               </h4>
             </div>
@@ -447,13 +551,6 @@
                 <a href="http://www.hechuangfy.com/product/数明半导体/" title="数明半导体" target="_self">
                   <span style="">数明半导体</span>
                 </a>
-                <!-- <p>
-                  德欧泰克有成套专项技术半导体器件的核心是硅芯片。而许多供应商只买芯片进行封装，德欧泰克掌握了半导体生产的成套专项技术。从晶圆和芯片的生产到组装测试和封装：必要的设备主要是由德欧泰克自己研发生产，并且对每个生产环节进行优化。晶圆及芯片生产在扩散炉中原料——晶圆——二极管转换反应=
-                  pn结+特殊半导体特性。然后将硅片被切割成单颗芯片，边缘被清洗和钝化，即保护。使用专有的，环保的等离子体EPOS工艺，具...</p>
-                 -->
-                <span class="btn-detail">
-                  <a href="http://www.hechuangfy.com/product/数明半导体/" title="数明半导体" target="_self">查看详情</a>
-                </span>
                 <p class="price m-b-0 m-t-5"></p>
               </h4>
             </div>
@@ -470,10 +567,6 @@
                 <a href="http://www.hechuangfy.com/product/haoou/" title="三垦电气" target="_self">
                   <span style="">三垦电气</span>
                 </a>
-                <p></p>
-                <span class="btn-detail">
-                  <a href="http://www.hechuangfy.com/product/haoou/" title="三垦电气" target="_self">查看详情</a>
-                </span>
                 <p class="price m-b-0 m-t-5"></p>
               </h4>
             </div>
@@ -490,10 +583,6 @@
                 <a href="http://www.hechuangfy.com/index.php?c=category&id=30" title="华润微电子" target="_self">
                   <span style="">华润微电子</span>
                 </a>
-                <p></p>
-                <span class="btn-detail">
-                  <a href="http://www.hechuangfy.com/index.php?c=category&id=30" title="华润微电子" target="_self">查看详情</a>
-                </span>
                 <p class="price m-b-0 m-t-5"></p>
               </h4>
             </div>
@@ -510,10 +599,6 @@
                 <a href="http://www.hechuangfy.com/index.php?c=category&id=31" title="达新" target="_self">
                   <span style="">达新</span>
                 </a>
-                <p></p>
-                <span class="btn-detail">
-                  <a href="http://www.hechuangfy.com/index.php?c=category&id=31" title="达新" target="_self">查看详情</a>
-                </span>
                 <p class="price m-b-0 m-t-5"></p>
               </h4>
             </div>
@@ -530,10 +615,6 @@
                 <a href="http://www.hechuangfy.com/index.php?c=category&id=32" title="国硅" target="_self">
                   <span style="">国硅</span>
                 </a>
-                <p></p>
-                <span class="btn-detail">
-                  <a href="http://www.hechuangfy.com/index.php?c=category&id=32" title="国硅" target="_self">查看详情</a>
-                </span>
                 <p class="price m-b-0 m-t-5"></p>
               </h4>
             </div>
@@ -549,12 +630,6 @@
                 <a href="http://www.hechuangfy.com/index.php?c=category&id=33" title="丽隽PIP" target="_self">
                   <span style="">丽隽PIP</span>
                 </a>
-                <!-- <p>
-                  东莞丽隽PIP科技有限公司成立于2016年11月23日，公司专注于半导体材料与器件的技术研发、生产及销售，主要产品包括碳化硅功率器件（如肖特基二极管、MOSFET及模块）以及基于亚微米CMOS、BIPOLAR、BICMOS、BCD等工艺技术的模拟及数字模拟混合集成电路产品
-                </p> -->
-                <span class="btn-detail">
-                  <a href="http://www.hechuangfy.com/index.php?c=category&id=33" title="丽隽PIP" target="_self">查看详情</a>
-                </span>
                 <p class="price m-b-0 m-t-5"></p>
               </h4>
             </div>
@@ -564,7 +639,7 @@
               <figure class="widget-header cover">
                 <a href="http://www.hechuangfy.com/product/AGMSEMI/" title="芯控源" target="_self">
                   <img class="product-image editable-click"
-                    src="http://www.hechuangfy.com/uploadfile/202508/1d7d098af4548ff.jpg" alt="芯控源" />
+                    src="uploadfile/202508/1d7d098af4548ff.jpg" alt="芯控源" />
                 </a>
               </figure>
               <h4 class="widget-title">
@@ -586,7 +661,7 @@
               <figure class="widget-header cover">
                 <a href="http://www.hechuangfy.com/product/luxing/" title="绿星" target="_self">
                   <img class="product-image editable-click"
-                    src="http://www.hechuangfy.com/uploadfile/202508/bd60966c4428976.jpg" alt="绿星" />
+                    src="uploadfile/202508/bd60966c4428976.jpg" alt="绿星" />
                 </a>
               </figure>
               <h4 class="widget-title">
@@ -707,7 +782,8 @@
             <li> <a href="/yangjie01.html" title="杨杰" target="_self">杨杰</a> </li>
             <li> <a href="/youyou01.html" title="优优" target="_self">优优</a> </li>
           </ul>
-        </div><div class="col-md-2 col-sm-12 list">
+        </div>
+        <div class="col-md-2 col-sm-12 list">
           <h4 class="m-t-0">
             <a href="http://www.hechuangfy.com/news/" title="新闻资讯" class="btn-collapse" target="_self">新闻资讯</a>
             <i class="fa fa-chevron-down"></i>
@@ -768,6 +844,7 @@
       </div>
     </div>
   </footer>
+
   <div class="foot_info_qilin_11_2_57414_bottom text-xs-center " p-id="57414" data-bg="#3e8378|#f43c48|1"
     data-ifbotc="#3e8378" style="background: rgb(62, 131, 120);">
     <div class="main">
@@ -923,9 +1000,10 @@
     count_User(navigator.userAgent);
   </script><!-- foot_end -->
 
-  <script src="http://www.hechuangfy.com/static/site/pc/js/basic.js"></script>
-  <script src="http://www.hechuangfy.com/static/site/pc/js/index.js"></script>
-  <script src="http://www.hechuangfy.com/static/site/pc/js/lang_json_cn.js"></script>
+  <script src="static/site/pc/js/basic.js"></script>
+  <script src="static/site/pc/js/index.js"></script>
+  <script src="static/site/pc/js/lang_json_cn.js"></script>
+
 </body>
 
 </html>
