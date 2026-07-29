@@ -204,6 +204,59 @@
       transform: rotate(45deg);
     }
 
+
+    /* ========== 产品展示增强 ========== */
+    .show-product-image {
+      position: relative;
+      border: none;
+      border-radius: 0;
+      overflow: hidden;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 500px;
+    }
+    .show-product-image img {
+      max-width: 100%;
+      max-height: 560px;
+      object-fit: contain;
+      transition: transform 0.4s ease;
+    }
+    .show-product-image:hover img {
+      transform: scale(1.05);
+    }
+    .show-product-info h1 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 12px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid #f0f0f0;
+    }
+    .show-product-back {
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 16px;
+      color: #999;
+      transition: color 0.2s;
+    }
+    .show-product-back:hover {
+      color: #E60000;
+    }
+    @media (max-width: 767px) {
+      .show-product-image {
+        min-height: 340px;
+        margin-bottom: 20px;
+      }
+      .show-product-image img {
+        max-height: 380px;
+      }
+      .show-product-info h1 {
+        font-size: 20px;
+      }
+    }
+
   </style>
     <header class="met-head navbar-fixed-top" p-id="57416" m-type="head_nav" met-imgmask="">
     <nav class="head_nav navbar navbar-default box-shadow-none head_nav_qilin_16_1_57416">
@@ -212,7 +265,9 @@
           <!-- logo -->
           <div class="navbar-header pull-xs-left">
             <div class="vertical-align-middle">
-              <img src="./picture/logo/pc_logo.png" alt="广东勤微电子有限公司" q-id="1266" q-table="web_site" q-field="logo_pc" />
+              <a href="/frontPage.html">
+                <img src="./picture/logo/pc_logo.png" alt="广东勤微电子有限公司" style="max-height:50px;height:auto;width:auto;" />
+              </a>
             </div>
           </div>
           <!-- logo -->
@@ -225,11 +280,12 @@
             id="head_nav_qilin_16_1_57416-collapse">
             <ul class="nav navbar-nav navlist">
               <li class="nav-item ">
-                <a href="" title="首页" data-title="首页" class="nav-link " target="_self"><span>首页</span></a>
+                <a href="/frontPage.html" title="首页" data-title="首页" class="nav-link "
+                  target="_self"><span>首页</span></a>
               </li>
               <li class="nav-item  dropdown m-l-0 ">
                 <a href="/about.html" title="关于我们" data-title="关于我们" class="nav-link  dropdown-toggle dropdown"
-                  data-toggle="dropdown" target="_self"><span>关于我们</span></a>
+                  data-toggle="dropdown" data-hover="dropdown" target="_self"><span>关于我们</span></a>
 
                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-bullet secondmenu">
                   <a href="/about.html" target="_self" title="关于我们"
@@ -245,7 +301,7 @@
               </li>
               <li class="nav-item  dropdown m-l-0 ">
                 <a href="/productCenter.html" title="产品中心" data-title="产品中心" class="nav-link  active dropdown-toggle dropdown"
-                  data-toggle="dropdown" target="_self"><span>产品中心</span></a>
+                  data-toggle="dropdown" data-hover="dropdown" target="_self"><span>产品中心</span></a>
 
                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-bullet secondmenu">
                   <a href="/sanling01.html" target="_self" title="三菱"
@@ -277,7 +333,7 @@
               </li>
               <li class="nav-item  dropdown m-l-0 ">
                 <a href="/newsCenter.html" title="新闻中心" data-title="新闻中心" class="nav-link  dropdown-toggle dropdown"
-                  data-toggle="dropdown" target="_self"><span>新闻中心</span></a>
+                  data-toggle="dropdown" data-hover="dropdown" target="_self"><span>新闻中心</span></a>
                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-bullet secondmenu">
                   <a href="/newsCenter.html" target="_self" title="行业新闻"
                     class="dropdown-item navlist-2 "><span>行业新闻</span></a>
@@ -336,8 +392,7 @@
     <div class="container">
       <div class="row">
         <ol class="breadcrumb m-b-0 subcolumn-crumbs">
-          <li class="breadcrumb-item"> <a href="http://www.hechuangfy.com/" title="首页"><em
-                class="icon wb-home"></em>首页</a> </li>
+          <li class="breadcrumb-item"> <a href="/frontPage.html" title="首页">首页</a> </li>
           <li class="breadcrumb-item"> <a href="/productCenter.html" title="产品中心">产品中心</a> </li>
           <li class="breadcrumb-item"> <a href="/pip01.html" title="丽隽PIP">丽隽PIP</a> </li>
         </ol>
@@ -348,30 +403,23 @@
     <div class="met-showproduct-head">
       <div class="container grey-box">
         <div class="row">
-          <div class="col-lg-7">
-            <div class="met-showproduct-list fngallery cover text-xs-center" id="met-imgs-slick" p-id="noset"
-              m-type="displayimgs">
-
-              <div class="slick-slide">
-                <span class="">
-                  <a href="static/picture/DB9D03AF-A3BE8328-3AF68252-4E487C860.jpeg" data-size="600x600"
-                    data-med="static/picture/DB9D03AF-A3BE8328-3AF68252-4E487C860.jpeg" data-med-size="600x600"
-                    class="lg-item-box " data-src="static/picture/DB9D03AF-A3BE8328-3AF68252-4E487C860.jpeg"
-                    data-exthumbimage="static/picture/DB9D03AF-A3BE8328-3AF68252-4E487C860.jpeg"
-                    data-sub-html="PTA28N50">
-                    <img src="static/picture/DB9D03AF-A3BE8328-3AF68252-4E487C860.jpeg"
-                      data-src="static/picture/DB9D03AF-A3BE8328-3AF68252-4E487C860.jpeg" class="img-fluid"
-                      alt="PTA28N50" />
-                  </a>
-                </span>
-              </div>
-
+          <div class="col-lg-6">
+            <div class="show-product-image">
+              <a href="static/picture/DB9D03AF-A3BE8328-3AF68252-4E487C860.jpeg" data-size="600x600"
+                data-med="static/picture/DB9D03AF-A3BE8328-3AF68252-4E487C860.jpeg" data-med-size="600x600"
+                class="lg-item-box" data-src="static/picture/DB9D03AF-A3BE8328-3AF68252-4E487C860.jpeg"
+                data-exthumbimage="static/picture/DB9D03AF-A3BE8328-3AF68252-4E487C860.jpeg"
+                data-sub-html="PTA28N50">
+                <img src="static/picture/DB9D03AF-A3BE8328-3AF68252-4E487C860.jpeg"
+                  data-src="static/picture/DB9D03AF-A3BE8328-3AF68252-4E487C860.jpeg" class="img-fluid"
+                  alt="PTA28N50" />
+              </a>
             </div>
           </div>
-          <div class="col-lg-5">
-            <div class="product-intro">
-              <h1 class="m-t-0 font-size-24">PTA28N50</h1>
-              <p class="description editable-click" q-id="445801" q-table="product" q-field="description"></p>
+          <div class="col-lg-6">
+            <div class="show-product-info">
+              <h1>PTA28N50</h1>
+              <a href="pip01.html" class="show-product-back">← 返回产品列表</a>
             </div>
           </div>
         </div>

@@ -235,8 +235,9 @@
       border-width: 10px 0 10px 16px;
       border-color: transparent transparent transparent #fff;
     }
+
     /* 导航下拉菜单 hover 显示 */
-    .head_nav_qilin_16_1_57416 .navlist .nav-item.dropdown:hover > .dropdown-menu {
+    .head_nav_qilin_16_1_57416 .navlist .nav-item.dropdown:hover>.dropdown-menu {
       display: block;
     }
 
@@ -266,10 +267,110 @@
       transform: rotate(45deg);
     }
 
+    /* ========== 产品卡片增强 ========== */
+    .sanling-product-grid .index-product-item {
+      height: 350px;
+      padding: 0;
+    }
+
+    .sanling-product-grid .widget {
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .sanling-product-grid .index-product-item:hover {
+      background: #fdf5f5;
+    }
+
+    .sanling-product-grid .widget-header a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fafafa;
+      padding: 10px 0;
+      width: 320px;
+      height: 210px;
+    }
+
+    .sanling-product-grid .widget-header img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      overflow: hidden;
+      transition: transform 0.5s cubic-bezier(0.17, 0.84, 0.44, 1);
+    }
+
+    .sanling-product-grid .index-product-item:hover .widget-header img {
+      transform: scale(1.08);
+    }
+
+
+
+    .sanling-product-grid .widget-title {
+      padding: 20px 16px 16px !important;
+      text-align: center;
+    }
+
+    .sanling-product-grid .widget-title a span {
+      font-size: 18px;
+      color: #333;
+      font-weight: 500;
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .sanling-product-grid .btn-detail {
+      display: inline-block;
+      opacity: 0;
+      margin-top: 8px;
+      transition: opacity 0.3s ease;
+    }
+
+    .sanling-product-grid .btn-detail a {
+      font-size: 16px !important;
+      color: #E60000 !important;
+      font-weight: 500 !important;
+    }
+
+    .sanling-product-grid .btn-detail a:hover {
+      color: #bb0303 !important;
+      text-decoration: underline;
+    }
+
+    .sanling-product-grid .index-product-item:hover .btn-detail {
+      opacity: 1;
+    }
+
+    @media (max-width: 767px) {
+      .sanling-product-grid .btn-detail {
+        opacity: 1;
+      }
+
+      .sanling-product-grid .index-product-item {
+        height: 260px;
+      }
+
+      .sanling-product-grid .widget-header a {
+        min-height: 200px;
+        padding: 10px;
+      }
+
+      .sanling-product-grid .widget-header img {
+        max-width: 180px;
+        height: 180px;
+      }
+
+      .sanling-product-grid .widget-title {
+        padding: 10px 8px 14px !important;
+      }
+    }
   </style>
   <!-- <link href="static/assets/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" /> -->
 
-    <header class="met-head navbar-fixed-top" p-id="57416" m-type="head_nav" met-imgmask="">
+  <header class="met-head navbar-fixed-top" p-id="57416" m-type="head_nav" met-imgmask="">
     <nav class="head_nav navbar navbar-default box-shadow-none head_nav_qilin_16_1_57416">
       <div class="container">
         <div class="row">
@@ -289,11 +390,12 @@
             id="head_nav_qilin_16_1_57416-collapse">
             <ul class="nav navbar-nav navlist">
               <li class="nav-item ">
-                <a href="" title="首页" data-title="首页" class="nav-link " target="_self"><span>首页</span></a>
+                <a href="/frontPage.html" title="首页" data-title="首页" class="nav-link "
+                  target="_self"><span>首页</span></a>
               </li>
               <li class="nav-item  dropdown m-l-0 ">
                 <a href="/about.html" title="关于我们" data-title="关于我们" class="nav-link  dropdown-toggle dropdown"
-                  data-toggle="dropdown" target="_self"><span>关于我们</span></a>
+                  data-toggle="dropdown" data-hover="dropdown" target="_self"><span>关于我们</span></a>
 
                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-bullet secondmenu">
                   <a href="/about.html" target="_self" title="关于我们"
@@ -309,7 +411,7 @@
               </li>
               <li class="nav-item  dropdown m-l-0 ">
                 <a href="/productCenter.html" title="产品中心" data-title="产品中心" class="nav-link  dropdown-toggle dropdown"
-                  data-toggle="dropdown" target="_self"><span>产品中心</span></a>
+                  data-toggle="dropdown" data-hover="dropdown" target="_self"><span>产品中心</span></a>
 
                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-bullet secondmenu">
                   <a href="/sanling01.html" target="_self" title="三菱"
@@ -341,7 +443,7 @@
               </li>
               <li class="nav-item  dropdown m-l-0 ">
                 <a href="/newsCenter.html" title="新闻中心" data-title="新闻中心" class="nav-link  dropdown-toggle dropdown"
-                  data-toggle="dropdown" target="_self"><span>新闻中心</span></a>
+                  data-toggle="dropdown" data-hover="dropdown" target="_self"><span>新闻中心</span></a>
                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-bullet secondmenu">
                   <a href="/newsCenter.html" target="_self" title="行业新闻"
                     class="dropdown-item navlist-2 "><span>行业新闻</span></a>
@@ -400,192 +502,176 @@
   <div class="product_list_page_qilin_11_2_57435 met-product animsition type-1" p-id="57435">
     <div class="container">
       <div class="row">
-        <ul
-          class="met-product-list met-pager-ajax  grey-box grey-product met-grid p-0 blocks-xs-2 blocks-md-3 blocks-lg-4 m-x-0"
-          id="met-grid" data-scale="600x760">
-          <li class="index-product-item shown m-b-0">
-            <div class="widget">
-              <figure class="widget-header cover">
-                <a href="#" title="水泵" target="_self">
-                  <img class="product-image editable-click"
-                    src="static/picture/D3CDA8F2-B761B4DF-E682EC44-1F6C3C7A0.jpg" alt="水泵" />
-                </a>
-              </figure>
-              <h4 class="widget-title">
-                <a href="#" title="水泵" target="_self">
-                  <span style="">水泵</span>
-                </a>
-                <p></p>
-                <span class="btn-detail">
-                  <a href="#" title="水泵" target="_self">查看详情</a>
-                </span>
-                <p class="price m-b-0 m-t-5"></p>
-              </h4>
-            </div>
-          </li>
-          <li class="index-product-item shown m-b-0">
-            <div class="widget">
-              <figure class="widget-header cover">
-                <a href="#" title="汽车电子" target="_self">
-                  <img class="product-image editable-click"
-                    src="static/picture/9BF6FF06-777ABD27-FC951922-0CEE3CFC0.jpg" alt="汽车电子" />
-                </a>
-              </figure>
-              <h4 class="widget-title">
-                <a href="#" title="汽车电子" target="_self">
-                  <span style="">汽车电子</span>
-                </a>
-                <p></p>
-                <span class="btn-detail">
-                  <a href="#" title="汽车电子" target="_self">查看详情</a>
-                </span>
-                <p class="price m-b-0 m-t-5"></p>
-              </h4>
-            </div>
-          </li>
-          <li class="index-product-item shown m-b-0">
-            <div class="widget">
-              <figure class="widget-header cover">
-                <a href="#" title="白色家电" target="_self">
-                  <img class="product-image editable-click"
-                    src="static/picture/64164BAC-5A6CD228-712D0F9F-C95091B10.jpg" alt="白色家电" />
-                </a>
-              </figure>
-              <h4 class="widget-title">
-                <a href="#" title="白色家电" target="_self">
-                  <span style="">白色家电</span>
-                </a>
-                <p></p>
-                <span class="btn-detail">
-                  <a href="#" title="白色家电" target="_self">查看详情</a>
-                </span>
-                <p class="price m-b-0 m-t-5"></p>
-              </h4>
-            </div>
-          </li>
-          <li class="index-product-item shown m-b-0">
-            <div class="widget">
-              <figure class="widget-header cover">
-                <a href="#" title="变频器" target="_self">
-                  <img class="product-image editable-click"
-                    src="static/picture/3D56886F-5A4752BD-C7D74CAE-C6FBAF700.jpg" alt="变频器" />
-                </a>
-              </figure>
-              <h4 class="widget-title">
-                <a href="#" title="变频器" target="_self">
-                  <span style="">变频器</span>
-                </a>
-                <p></p>
-                <span class="btn-detail">
-                  <a href="#" title="变频器" target="_self">查看详情</a>
-                </span>
-                <p class="price m-b-0 m-t-5"></p>
-              </h4>
-            </div>
-          </li>
-          <li class="index-product-item shown m-b-0">
-            <div class="widget">
-              <figure class="widget-header cover">
-                <a href="#" title="电动工具" target="_self">
-                  <img class="product-image editable-click"
-                    src="static/picture/EBC194E8-F3A62947-37C3BC60-33866DC00.jpg" alt="电动工具" />
-                </a>
-              </figure>
-              <h4 class="widget-title">
-                <a href="#" title="电动工具" target="_self">
-                  <span style="">电动工具</span>
-                </a>
-                <p></p>
-                <span class="btn-detail">
-                  <a href="#" title="电动工具" target="_self">查看详情</a>
-                </span>
-                <p class="price m-b-0 m-t-5"></p>
-              </h4>
-            </div>
-          </li>
-          <li class="index-product-item shown m-b-0">
-            <div class="widget">
-              <figure class="widget-header cover">
-                <a href="#" title="风机" target="_self">
-                  <img class="product-image editable-click"
-                    src="static/picture/4EBF60FF-90953353-F9D8C741-CF76D6440.jpg" alt="风机" />
-                </a>
-              </figure>
-              <h4 class="widget-title">
-                <a href="#" title="风机" target="_self">
-                  <span style="">风机</span>
-                </a>
-                <p></p>
-                <span class="btn-detail">
-                  <a href="#" title="风机" target="_self">查看详情</a>
-                </span>
-                <p class="price m-b-0 m-t-5"></p>
-              </h4>
-            </div>
-          </li>
-          <li class="index-product-item shown m-b-0">
-            <div class="widget">
-              <figure class="widget-header cover">
-                <a href="#" title="逆变器" target="_self">
-                  <img class="product-image editable-click"
-                    src="static/picture/87D79678-AF909801-F173F3A4-6E17F99D0.jpg" alt="逆变器" />
-                </a>
-              </figure>
-              <h4 class="widget-title">
-                <a href="#" title="逆变器" target="_self">
-                  <span style="">逆变器</span>
-                </a>
-                <p></p>
-                <span class="btn-detail">
-                  <a href="#" title="逆变器" target="_self">查看详情</a>
-                </span>
-                <p class="price m-b-0 m-t-5"></p>
-              </h4>
-            </div>
-          </li>
-          <li class="index-product-item shown m-b-0">
-            <div class="widget">
-              <figure class="widget-header cover">
-                <a href="#" title="跑步机" target="_self">
-                  <img class="product-image editable-click"
-                    src="static/picture/0BE854F4-3584836E-8259D3B7-1FB136070.jpg" alt="跑步机" />
-                </a>
-              </figure>
-              <h4 class="widget-title">
-                <a href="#" title="跑步机" target="_self">
-                  <span style="">跑步机</span>
-                </a>
-                <p></p>
-                <span class="btn-detail">
-                  <a href="#" title="跑步机" target="_self">查看详情</a>
-                </span>
-                <p class="price m-b-0 m-t-5"></p>
-              </h4>
-            </div>
-          </li>
-          <li class="index-product-item shown m-b-0">
-            <div class="widget">
-              <figure class="widget-header cover">
-                <a href="#" title="伺服器" target="_self">
-                  <img class="product-image editable-click"
-                    src="static/picture/A8530DF6-40C8E38B-15065493-10C036860.jpg" alt="伺服器" />
-                </a>
-              </figure>
-              <h4 class="widget-title">
-                <a href="#" title="伺服器" target="_self">
-                  <span style="">伺服器</span>
-                </a>
-                <p></p>
-                <span class="btn-detail">
-                  <a href="#" title="伺服器" target="_self">查看详情</a>
-                </span>
-                <p class="price m-b-0 m-t-5"></p>
-              </h4>
-            </div>
-          </li>
-        </ul>
+        <div class="sanling-product-grid">
+          <ul
+            class="met-product-list met-pager-ajax  grey-box grey-product met-grid p-0 blocks-xs-2 blocks-md-3 blocks-lg-4 m-x-0"
+            id="met-grid" data-scale="600x760">
+            <li class="index-product-item shown m-b-0">
+              <div class="widget">
+                <figure class="widget-header cover">
+                  <a href="#" title="水泵" target="_self">
+                    <img class="product-image editable-click"
+                      src="static/picture/D3CDA8F2-B761B4DF-E682EC44-1F6C3C7A0.jpg" alt="水泵" />
+                  </a>
+                </figure>
+                <h4 class="widget-title">
+                  <a href="#" title="水泵" target="_self">
+                    <span style="">水泵</span>
+                  </a>
+                  <span class="btn-detail">
+                    <a href="#" title="水泵" target="_self">查看详情</a>
+                  </span>
+                </h4>
+              </div>
+            </li>
+            <li class="index-product-item shown m-b-0">
+              <div class="widget">
+                <figure class="widget-header cover">
+                  <a href="#" title="汽车电子" target="_self">
+                    <img class="product-image editable-click"
+                      src="static/picture/9BF6FF06-777ABD27-FC951922-0CEE3CFC0.jpg" alt="汽车电子" />
+                  </a>
+                </figure>
+                <h4 class="widget-title">
+                  <a href="#" title="汽车电子" target="_self">
+                    <span style="">汽车电子</span>
+                  </a>
+                  <span class="btn-detail">
+                    <a href="#" title="汽车电子" target="_self">查看详情</a>
+                  </span>
+                </h4>
+              </div>
+            </li>
+            <li class="index-product-item shown m-b-0">
+              <div class="widget">
+                <figure class="widget-header cover">
+                  <a href="#" title="白色家电" target="_self">
+                    <img class="product-image editable-click"
+                      src="static/picture/64164BAC-5A6CD228-712D0F9F-C95091B10.jpg" alt="白色家电" />
+                  </a>
+                </figure>
+                <h4 class="widget-title">
+                  <a href="#" title="白色家电" target="_self">
+                    <span style="">白色家电</span>
+                  </a>
+                  <span class="btn-detail">
+                    <a href="#" title="白色家电" target="_self">查看详情</a>
+                  </span>
+                </h4>
+              </div>
+            </li>
+            <li class="index-product-item shown m-b-0">
+              <div class="widget">
+                <figure class="widget-header cover">
+                  <a href="#" title="变频器" target="_self">
+                    <img class="product-image editable-click"
+                      src="static/picture/3D56886F-5A4752BD-C7D74CAE-C6FBAF700.jpg" alt="变频器" />
+                  </a>
+                </figure>
+                <h4 class="widget-title">
+                  <a href="#" title="变频器" target="_self">
+                    <span style="">变频器</span>
+                  </a>
+                  <span class="btn-detail">
+                    <a href="#" title="变频器" target="_self">查看详情</a>
+                  </span>
+                </h4>
+              </div>
+            </li>
+            <li class="index-product-item shown m-b-0">
+              <div class="widget">
+                <figure class="widget-header cover">
+                  <a href="#" title="电动工具" target="_self">
+                    <img class="product-image editable-click"
+                      src="static/picture/EBC194E8-F3A62947-37C3BC60-33866DC00.jpg" alt="电动工具" />
+                  </a>
+                </figure>
+                <h4 class="widget-title">
+                  <a href="#" title="电动工具" target="_self">
+                    <span style="">电动工具</span>
+                  </a>
+                  <span class="btn-detail">
+                    <a href="#" title="电动工具" target="_self">查看详情</a>
+                  </span>
+                </h4>
+              </div>
+            </li>
+            <li class="index-product-item shown m-b-0">
+              <div class="widget">
+                <figure class="widget-header cover">
+                  <a href="#" title="风机" target="_self">
+                    <img class="product-image editable-click"
+                      src="static/picture/4EBF60FF-90953353-F9D8C741-CF76D6440.jpg" alt="风机" />
+                  </a>
+                </figure>
+                <h4 class="widget-title">
+                  <a href="#" title="风机" target="_self">
+                    <span style="">风机</span>
+                  </a>
+                  <span class="btn-detail">
+                    <a href="#" title="风机" target="_self">查看详情</a>
+                  </span>
+                </h4>
+              </div>
+            </li>
+            <li class="index-product-item shown m-b-0">
+              <div class="widget">
+                <figure class="widget-header cover">
+                  <a href="#" title="逆变器" target="_self">
+                    <img class="product-image editable-click"
+                      src="static/picture/87D79678-AF909801-F173F3A4-6E17F99D0.jpg" alt="逆变器" />
+                  </a>
+                </figure>
+                <h4 class="widget-title">
+                  <a href="#" title="逆变器" target="_self">
+                    <span style="">逆变器</span>
+                  </a>
+                  <span class="btn-detail">
+                    <a href="#" title="逆变器" target="_self">查看详情</a>
+                  </span>
+                </h4>
+              </div>
+            </li>
+            <li class="index-product-item shown m-b-0">
+              <div class="widget">
+                <figure class="widget-header cover">
+                  <a href="#" title="跑步机" target="_self">
+                    <img class="product-image editable-click"
+                      src="static/picture/0BE854F4-3584836E-8259D3B7-1FB136070.jpg" alt="跑步机" />
+                  </a>
+                </figure>
+                <h4 class="widget-title">
+                  <a href="#" title="跑步机" target="_self">
+                    <span style="">跑步机</span>
+                  </a>
+                  <span class="btn-detail">
+                    <a href="#" title="跑步机" target="_self">查看详情</a>
+                  </span>
+                </h4>
+              </div>
+            </li>
+            <li class="index-product-item shown m-b-0">
+              <div class="widget">
+                <figure class="widget-header cover">
+                  <a href="#" title="伺服器" target="_self">
+                    <img class="product-image editable-click"
+                      src="static/picture/A8530DF6-40C8E38B-15065493-10C036860.jpg" alt="伺服器" />
+                  </a>
+                </figure>
+                <h4 class="widget-title">
+                  <a href="#" title="伺服器" target="_self">
+                    <span style="">伺服器</span>
+                  </a>
+                  <span class="btn-detail">
+                    <a href="#" title="伺服器" target="_self">查看详情</a>
+                  </span>
+                </h4>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="m-t-20 text-xs-center">
+      <div class="pagination-wrapper">
         <div>
           <ul class="pagination2">
             <li><a>共9条</a></li>
