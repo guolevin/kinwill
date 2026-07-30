@@ -18,10 +18,6 @@
   <!--[if lte IE 9]>
 		<script src="static/site/pc/js/lteie9.js"></script>
 		<![endif]-->
-  <script type="text/javascript" src="/static/site/pc/js/revolution.extension.video.min.js"></script>
-  <script type="text/javascript" src="/static/site/pc/js/revolution.extension.slideanims.min.js"></script>
-  <script type="text/javascript" src="/static/site/pc/js/revolution.extension.navigation.min.js"></script>
-  <script type="text/javascript" src="/static/site/pc/js/revolution.extension.parallax.min.js"></script>
 </head>
 <!--[if lte IE 8]>
 	<div class="text-xs-center m-b-0 bg-blue-grey-100 alert">
@@ -177,64 +173,6 @@
       background-color: #e60000;
     }
 
-    /* Bullet indicators visible on light/white backgrounds */
-    .banner_qilin_28_1_57417 .uranus .tp-bullet {
-      box-shadow: 0 0 0 2px rgba(0, 0, 0, 0);
-    }
-
-    .banner_qilin_28_1_57417 .uranus .tp-bullet.selected {
-      box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.5);
-    }
-
-    .banner_qilin_28_1_57417 .uranus .tp-bullet-inner {
-      background-color: rgba(0, 0, 0, 0.4);
-    }
-
-    .banner_qilin_28_1_57417 .uranus .tp-bullet.selected .tp-bullet-inner {
-      background-color: rgb(0, 0, 0);
-    }
-
-    /* Zeus arrows - show only on hover */
-    .banner_qilin_28_1_57417 .zeus.tparrows {
-      background: rgba(0, 0, 0, 0.3);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      transform: translateY(-50%);
-    }
-
-    .banner_qilin_28_1_57417 .rev_slider_wrapper:hover .zeus.tparrows {
-      opacity: 1;
-    }
-
-    /* Prevent the inner wrapper from darkening on arrow hover */
-    .banner_qilin_28_1_57417 .zeus.tparrows:hover .tp-arr-allwrapper {
-      opacity: 0 !important;
-      transform: scale(0) !important;
-    }
-
-    .banner_qilin_28_1_57417 .zeus.tparrows:before {
-      content: '' !important;
-      font-family: none !important;
-      width: 0;
-      height: 0;
-      border-style: solid;
-      position: absolute;
-      top: 50%;
-    }
-
-    .banner_qilin_28_1_57417 .zeus.tparrows.tp-leftarrow:before {
-      left: 40%;
-      margin-top: -10px;
-      border-width: 10px 16px 10px 0;
-      border-color: transparent #fff transparent transparent;
-    }
-
-    .banner_qilin_28_1_57417 .zeus.tparrows.tp-rightarrow:before {
-      left: 45%;
-      margin-top: -10px;
-      border-width: 10px 0 10px 16px;
-      border-color: transparent transparent transparent #fff;
-    }
 
     /* 导航下拉菜单 hover 显示 */
     .head_nav_qilin_16_1_57416 .navlist .nav-item.dropdown:hover>.dropdown-menu {
@@ -494,7 +432,6 @@
           </li>
         </ul>
         <div class="tp-bannertimer" style="height: 6px; background-color: rgba(0, 0, 0, 0.14902);top:0px;"></div>
-
       </div>
     </div>
   </div><!-- head_end -->
@@ -1007,96 +944,8 @@
 
   <script src="static/site/pc/js/basic.js"></script>
   <script src="static/site/pc/js/index.js"></script>
-  <!-- Revolution Slider 5.x Extension Stubs (loaded synchronously before .revolution() init) -->
-  <script src="static/site/pc/js/revolution.extension.video.min.js"></script>
-  <script src="static/site/pc/js/revolution.extension.slideanims.min.js"></script>
-  <script src="static/site/pc/js/revolution.extension.navigation.min.js"></script>
-  <script src="static/site/pc/js/revolution.extension.parallax.min.js"></script>
-  <script src="static/site/pc/js/revolution.extension.layeranimation.min.js"></script>
-  <script src="static/site/pc/js/revolution.extension.actions.min.js"></script>
-  <script src="static/site/pc/js/revolution.extension.kenburn.min.js"></script>
-  <script src="static/site/pc/js/revolution.extension.migration.min.js"></script>
-  <script src="static/site/pc/js/revolution.extension.carousel.min.js"></script>
   <script src="static/site/pc/js/lang_json_cn.js"></script>
-  <script>
-    // Diagnostic: check slider state after initialization
-    // Hook revolution slider events early
-    (function () {
-      var tpBanner = document.querySelector('.banner_qilin_28_1_57417 .tp-banner');
-      if (tpBanner && window.jQuery) {
-        var events = [
-          'revolution.slide.onbeforeswap',
-          'revolution.slide.onchange',
-          'revolution.slide.onafterswap',
-          'revolution.slide.onloaded',
-          'revolution.slide.slideatend',
-          'revolution.slide.onstop',
-          'revolution.slide.onpause',
-          'revolution.slide.onresume'
-        ];
-        jQuery(tpBanner).on(events.join(' '), function (e, data) {
-          var info = '';
-          if (data && data.slideIndex) info = ' slideIndex=' + data.slideIndex;
-          console.log('[HOOK]', e.type + info, '| time:', Date.now() % 100000);
-        });
-        console.log('[HOOK] Event listeners registered');
-      }
-    })();
 
-    setTimeout(function () {
-      console.log('[DIAG] === Slider Diagnostic (after 2s) ===');
-      console.log('[DIAG] punchgs defined:', typeof punchgs !== 'undefined');
-      console.log('[DIAG] jQuery.fn.revolution defined:', typeof jQuery.fn.revolution !== 'undefined');
-
-      var wrapper = document.querySelector('.banner_qilin_28_1_57417 .rev_slider_wrapper');
-      console.log('[DIAG] .rev_slider_wrapper found:', !!wrapper);
-      if (wrapper) {
-        console.log('[DIAG] wrapper height:', wrapper.offsetHeight);
-        console.log('[DIAG] wrapper width:', wrapper.offsetWidth);
-      }
-
-      var tpBanner = document.querySelector('.banner_qilin_28_1_57417 .tp-banner');
-      console.log('[DIAG] .tp-banner found:', !!tpBanner);
-      if (tpBanner) {
-        console.log('[DIAG] tp-banner height:', tpBanner.offsetHeight);
-        console.log('[DIAG] has class revslider-initialised:', tpBanner.classList.contains('revslider-initialised'));
-        console.log('[DIAG] has class tp-simpleresponsive:', tpBanner.classList.contains('tp-simpleresponsive'));
-      }
-
-      var bgImgs = document.querySelectorAll('.banner_qilin_28_1_57417 .tp-bgimg');
-      console.log('[DIAG] .tp-bgimg count:', bgImgs.length);
-      bgImgs.forEach(function (el, i) {
-        var bg = el.style.backgroundImage;
-        console.log('[DIAG] .tp-bgimg[' + i + '] bg:', bg ? bg.substring(0, 100) : 'none');
-        console.log('[DIAG] .tp-bgimg[' + i + '] opacity:', el.style.opacity);
-        console.log('[DIAG] .tp-bgimg[' + i + '] visibility:', el.style.visibility);
-      });
-
-      var slotholders = document.querySelectorAll('.banner_qilin_28_1_57417 .slotholder');
-      console.log('[DIAG] .slotholder count:', slotholders.length);
-
-      var activeSlide = document.querySelector('.banner_qilin_28_1_57417 .active-revslide');
-      console.log('[DIAG] .active-revslide found:', !!activeSlide);
-
-      var nextSlide = document.querySelector('.banner_qilin_28_1_57417 .next-revslide');
-      var processingSlide = document.querySelector('.banner_qilin_28_1_57417 .processing-revslide');
-      console.log('[DIAG] .next-revslide found:', !!nextSlide);
-      console.log('[DIAG] .processing-revslide found:', !!processingSlide);
-
-      // Check ALL LI classes
-      var allLi = document.querySelectorAll('.banner_qilin_28_1_57417 .tp-revslider-slidesli');
-      console.log('[DIAG] total LIs:', allLi.length);
-      allLi.forEach(function (li, i) {
-        console.log('[DIAG] LI[' + i + '] classes:', li.className);
-        console.log('[DIAG] LI[' + i + '] style.opacity:', li.style.opacity);
-        console.log('[DIAG] LI[' + i + '] computed opacity:', window.getComputedStyle(li).opacity);
-      });
-
-      var loader = document.querySelector('.banner_qilin_28_1_57417 .tp-loader');
-      if (loader) {
-        console.log('[DIAG] .tp-loader display:', window.getComputedStyle(loader).display);
-      }
-    }, 2000);
   </script>
 </body>
 
