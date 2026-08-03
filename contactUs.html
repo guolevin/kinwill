@@ -240,6 +240,25 @@
       border-width: 3px 3px 0 0;
       transform: rotate(45deg);
     }
+
+    .company-info {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 18px;
+    }
+
+    .company-info td {
+      border: 1px solid #ddd;
+      padding: 12px 15px;
+      text-align: left;
+      word-break: break-all;
+    }
+
+    .company-info .company-name {
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+    }
   </style>
   <!-- <link href="static/assets/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" /> -->
 
@@ -378,54 +397,59 @@
           <div class="">
             <section class="met-editor clearfix">
               <table>
-                <tbody>
-                  <tr class="firstRow">
-                    <td valign="middle" style="word-break: break-all; border-color: rgb(221, 221, 221);" align="left"
-                      rowspan="1" colspan="2" class="selectTdClass"><span
-                        style="text-align: center; font-size: 18px;">广东勤微电子有限公司</span></td>
-                  </tr>
-                  <tr class="firstRow">
-                    <td valign="middle" style="word-break: break-all; border-color: rgb(221, 221, 221);" align="left"
-                      rowspan="1" colspan="2" class="selectTdClass"><span
-                        style="text-align: center; font-size: 18px;">HCFY&nbsp;Electronic&nbsp;Technology&nbsp;Limited</span>
-                    </td>
-                  </tr>
-                  <tr class="firstRow">
-                    <td valign="middle" style="word-break: break-all; border-color: rgb(221, 221, 221);" align="left"
-                      class="selectTdClass"><span
-                        style="text-align: center; font-size: 18px;">Emily（李小姐）：13723595064</span></td>
-                    <td valign="middle" style="word-break: break-all; border-color: rgb(221, 221, 221);" align="left"
-                      class="selectTdClass"><span style="text-align: center; font-size: 18px;">Candy：15017146841</span>
-                    </td>
-                  </tr>
-                  <tr class="firstRow">
-                    <td valign="middle" style="word-break: break-all; border-color: rgb(221, 221, 221);" align="left"
-                      class="selectTdClass"><span
-                        style="text-align: center; font-size: 18px;">Mobile：0769-82828396</span></td>
-                    <td valign="middle" style="word-break: break-all; border-color: rgb(221, 221, 221);" align="left"
-                      class="selectTdClass"><span
-                        style="text-align: center; font-size: 18px;">Mobile：0769-82828396</span></td>
-                  </tr>
-                  <tr>
-                    <td valign="middle" style="word-break: break-all; border-color: rgb(221, 221, 221);" align="left"
-                      class="selectTdClass"><span
-                        style="text-align: center; font-size: 18px;">Email：lily@hechuangfy.com</span></td>
-                    <td valign="middle" style="word-break: break-all; border-color: rgb(221, 221, 221);" align="left"
-                      class="selectTdClass"><span
-                        style="text-align: center; font-size: 18px;">Email：Candy@hechuangfy.com</span></td>
-                  </tr>
-                  <tr class="firstRow">
-                    <td valign="middle" style="word-break: break-all; border-color: rgb(221, 221, 221);" align="left"
-                      rowspan="1" colspan="2" class="selectTdClass"><span
-                        style="text-align: center; font-size: 18px;">地址：广东省东莞市虎门镇连升路139号A+大厦9楼911-915室</span></td>
-                  </tr>
-                  <tr class="firstRow">
-                    <td valign="middle" style="word-break: break-all; border-color: rgb(221, 221, 221);" align="left"
-                      rowspan="1" colspan="2" class="selectTdClass"><span
-                        style="text-align: center; font-size: 18px;">Address：Room 933, building 1, dongzheng road,
-                        changping town, dongguan city, guangdong province</span></td>
-                  </tr>
-                </tbody>
+                <table class="company-info">
+                  <tbody>
+                    <tr>
+                      <td colspan="2" class="company-name">
+                        广东勤微电子有限公司
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td colspan="2" class="company-name">
+                        HCFY Electronic Technology Limited
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        联系人：Carolyne（赵小姐）
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        手机：13728165816
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        电话：0769-89606526
+                      </td>
+
+                    </tr>
+
+                    <tr>
+                      <td>
+                        Email：chshxi@kinwill.com
+                      </td>
+
+                    </tr>
+
+                    <tr>
+                      <td colspan="2">
+                        地址：广东省东莞市虎门镇虎门长堤路62号1101室
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td colspan="2">
+                        Address: Room 1101, No. 62, Humen Changdi Road, Humen Town, Dongguan City, Guangdong Province
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </table> <br />
               <div>
                 <style>
@@ -440,11 +464,11 @@
                 <!--百度地图容器-->
                 <script type='text/javascript'
                   src='http://api.map.baidu.com/api?v=2.0&ak=R92SaV1vK5EHCeCimYFpPmPG'></script>
-                <div class="map_style" id="dr_map_40" style="width:100%px; height:400px; overflow:hidden"></div>
+                <div class="map_style" id="dr_map_40" style="width:100%; height:400px; overflow:hidden"></div>
                 <script type="text/javascript">
                   var mapObj = null;
-                  lngX = "114.014845";
-                  latY = "22.989893";
+                  lngX = "113.66,";
+                  latY = "22.85";
                   zoom = "15";
                   var mapObj = new BMap.Map("dr_map_40");
                   var ctrl_nav = new BMap.NavigationControl({ anchor: BMAP_ANCHOR_TOP_LEFT, type: BMAP_NAVIGATION_CONTROL_LARGE });
@@ -453,6 +477,9 @@
                   mapObj.enableScrollWheelZoom();
                   mapObj.enableDoubleClickZoom();
                   mapObj.enableKeyboard();//启用键盘上下左右键移动地图
+
+                  var address = "广东省东莞市虎门镇连升路139号A+大厦9楼911-915室";
+
                   mapObj.centerAndZoom(new BMap.Point(lngX, latY), zoom);
                   drawPoints();
                   function drawPoints() {
@@ -461,7 +488,14 @@
                     var point = new BMap.Point(lngX, latY);
                     var marker = new BMap.Marker(point, { icon: myIcon });
                     mapObj.addOverlay(marker);
-                    mapObj.openInfoWindow(new BMap.InfoWindow("广东勤微电子有限公司<br>广东省东莞市虎门镇连升路139号A+大厦9楼911-915室", { offset: new BMap.Size(0, -17) }), point);
+                    var infoWindow = new BMap.InfoWindow(
+                      "广东勤微电子有限公司<br>" + address,
+                      {
+                        offset: new BMap.Size(0, -17)
+                      }
+                    );
+                    mapObj.openInfoWindow(infoWindow, point);
+                    // mapObj.openInfoWindow(new BMap.InfoWindow("广东勤微电子有限公司<br>广东省东莞市虎门镇虎门长堤路62号1101室", { offset: new BMap.Size(0, -17) }), point);
                   }
                 </script>
               </div>
