@@ -204,6 +204,26 @@
       transform: rotate(45deg);
     }
 
+    #list-social li {
+      display: flex !important;
+      justify-items: center;
+      align-items: center;
+      text-align: left !important;
+    }
+
+
+    #list-social li i {
+      width: 14px;
+      height: auto;
+      flex: none;
+      margin-right: 5px;
+    }
+
+
+    #list-social li span {
+      white-space: nowrap;
+    }
+
     /* ========== 品牌介绍区域增强 ========== */
     .brand-intro-card {
       margin: 25px 0;
@@ -678,20 +698,20 @@
 
         <div class="col-md-2 col-sm-12 list">
           <h4 class="m-t-0">
-            <a href="http://www.hechuangfy.com/abouts/" title="关于我们" class="btn-collapse" target="_self">关于我们</a>
+            <a href="/about.html" title="公司简介" class="btn-collapse" target="_self">公司简介</a>
             <i class="fa fa-chevron-down"></i>
           </h4>
           <ul class="ulstyle  m-b-0" id="list-41273">
-            <li> <a href="http://www.hechuangfy.com/abouts/about/" title="关于我们" target="_self">关于我们</a> </li>
-            <li> <a href="http://www.hechuangfy.com/abouts/album/" title="企业相册" target="_self">企业相册</a> </li>
-            <li> <a href="http://www.hechuangfy.com/abouts/honor/" title="荣誉资质" target="_self">荣誉资质</a> </li>
-            <li> <a href="http://www.hechuangfy.com/abouts/feedback/" title="在线留言" target="_self">在线留言</a> </li>
+            <li> <a href="/about.html" title="关于我们" target="_self">关于我们</a> </li>
+            <li> <a href="/teamShowcase.html" title="团队风采" target="_self">团队风采</a> </li>
+            <li> <a href="/template.html" title="荣誉资质" target="_self">荣誉资质</a> </li>
+            <li> <a href="/template.html" title="在线留言" target="_self">在线留言</a> </li>
           </ul>
         </div>
 
         <div class="col-md-2 col-sm-12 list">
           <h4 class="m-t-0">
-            <a href="" title="产品中心" class="btn-collapse" target="_self">产品中心</a>
+            <a href="/productCenter.html" title="产品中心" class="btn-collapse" target="_self">产品中心</a>
             <i class="fa fa-chevron-down"></i>
           </h4>
           <ul class="ulstyle  m-b-0" id="list-41273">
@@ -713,7 +733,7 @@
 
         <div class="col-md-2 col-sm-12 list">
           <h4 class="m-t-0">
-            <a href="" title="产品中心" class="btn-collapse" target="_self">产品中心</a>
+            <a href="/productCenter.html" title="产品中心" class="btn-collapse" target="_self">产品中心</a>
             <i class="fa fa-chevron-down"></i>
           </h4>
           <ul class="ulstyle  m-b-0" id="list-41273">
@@ -723,46 +743,49 @@
           </ul>
         </div><div class="col-md-2 col-sm-12 list">
           <h4 class="m-t-0">
-            <a href="http://www.hechuangfy.com/news/" title="新闻资讯" class="btn-collapse" target="_self">新闻资讯</a>
+            <a href="/newsCenter.html" title="新闻资讯" class="btn-collapse" target="_self">新闻资讯</a>
             <i class="fa fa-chevron-down"></i>
           </h4>
           <ul class="ulstyle  m-b-0" id="list-41273">
-            <li> <a href="http://www.hechuangfy.com/news/xingyexinwen/" title="行业新闻" target="_self">行业新闻</a> </li>
-            <li> <a href="http://www.hechuangfy.com/news/gongsidongtai/" title="公司动态" target="_self">公司动态</a> </li>
-            <li> <a href="http://www.hechuangfy.com/news/changjianwenti/" title="常见问题" target="_self">常见问题</a> </li>
+            <li> <a href="/newsCenter.html" title="行业新闻" target="_self">行业新闻</a> </li>
+            <li> <a href="/template.html" title="公司动态" target="_self">公司动态</a> </li>
+            <li> <a href="/template.html" title="常见问题" target="_self">常见问题</a> </li>
           </ul>
         </div>
 
 
 
-        <div class="col-md-2 col-sm-12 list">
+        <div class="col-md-3 col-sm-12 list">
           <h4 class="m-t-0"> <a title="关注我们" class="btn-collapse" style="text-align: left;">关注我们</a> <i
               class="fa fa-chevron-down"></i> </h4>
-          <ul class="ulstyle m-b-0" id="list-social">
-            <!--微信-->
-            <li style="text-align: left;">
-              <a id="met-weixin" data-plugin="webuiPopover" data-trigger="hover" data-animation="pop"
-                data-placement="top" data-width="155" data-padding="0"
-                data-content="&lt;div class='text-xs-center'&gt;&lt;img src='http://www.hechuangfy.com/static/site/pc/images/3638609e98724ffdab4970f76a7e2756.gif' width='150' height='150' id='met-weixin-img'&gt;&lt;/div&gt;"><i
-                  class="fa fa-weixin"></i>13723595064（微电同号） </a>
+          <ul id="list-social">
+
+            <!-- <li>
+              <i class="fa fa-user"></i>
+              <span>Carolyne（赵小姐）</span>
+            </li> -->
+
+            <li>
+              <i class="fa fa-mobile"></i>
+              <span>13728165816</span>
             </li>
-            <!--微信-->
-            <!--QQ-->
-            <li style="text-align: left;"> <a
-                href="http://wpa.qq.com/msgrd?v=3&amp;uin=2462485023&amp;site=qq&amp;menu=yes" rel="nofollow"
-                target="_blank"> <i class="fa fa-qq"></i>2462485023 </a> </li>
-            <!--QQ-->
-            <!--邮箱-->
-            <li style="text-align: left;"> <a href="mailto:lily_hcfy@163.com"> <i class="fa fa-envelope"></i>官方邮箱 </a>
+
+            <li>
+              <i class="fa fa-phone"></i>
+              <span>0769-89606526</span>
             </li>
-            <!--邮箱-->
+
+            <li>
+              <i class="fa fa-envelope"></i>
+              <span>chshxi@kinwill.com</span>
+            </li>
           </ul>
         </div>
       </div>
       <div class="col-lg-4 col-md-12 col-ms-12 col-xs-12 info">
-        <a class="foot-tel">QQ：2462485023（李经理）</a>
-        <p>周一至周五:8:30~17:30</p>
-        <a href="/contact/" class="btn-message" title="联系我们" target="_blank"> <i class="fa fa-question-circle"></i> 联系我们
+        <a class="foot-tel">Wechat：13728165816（赵小姐）</a>
+        <p>周一至周六:8:30~18:00</p>
+        <a href="/contactUs.html" class="btn-message" title="联系我们"> <i class="fa fa-question-circle"></i> 联系我们
         </a>
       </div>
     </div>
@@ -773,11 +796,7 @@
         <p>
           <span>Copyright © 广东勤微电子有限公司 &nbsp;&nbsp;
           </span>
-          <span style="float:right;"><a href="/sitemap.xml" target="_blank" style="color:#fff;">网站地图</a>
-            &nbsp;&nbsp;
-            技术支持： <a href="//www.1wt.com.cn" target="_blank" style="color:#fff;">赢网科技</a> &nbsp;&nbsp;
-            <meta name="baidu-site-verification" content="code-8qpkCzYKi4" />
-          </span>
+
         </p>
       </div>
     </div>
