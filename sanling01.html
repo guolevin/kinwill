@@ -457,9 +457,9 @@
                     class="dropdown-item navlist-2 "><span>关于我们</span></a>
                   <a href="/teamShowcase.html" target="_self" title="团队风采"
                     class="dropdown-item navlist-2 "><span>团队风采</span></a>
-                  <a href="/blankPage.html" target="_self" title="荣誉资质"
+                  <a href="/template.html" target="_self" title="荣誉资质"
                     class="dropdown-item navlist-2 "><span>荣誉资质</span></a>
-                  <a href="/blankPage.html" target="_self" title="在线留言"
+                  <a href="/template.html" target="_self" title="在线留言"
                     class="dropdown-item navlist-2 "><span>在线留言</span></a>
 
                 </div>
@@ -505,7 +505,7 @@
                     class="dropdown-item navlist-2 "><span>行业新闻</span></a>
                   <a href="/newsCenter.html" target="_self" title="公司动态"
                     class="dropdown-item navlist-2 "><span>公司动态</span></a>
-                  <a href="/blankPage.html" target="_self" title="常见问题"
+                  <a href="/template.html" target="_self" title="常见问题"
                     class="dropdown-item navlist-2 "><span>常见问题</span></a>
                 </div>
               </li>
@@ -1078,10 +1078,8 @@
         async: true, //异步
         data: {
           data: data,
-  				{
-          csrf_token()
-        }: "94879124a5a22b127c5408af7b6f80f1",
-  			},
+          csrf_token: "94879124a5a22b127c5408af7b6f80f1"
+        },
     error: function(err) {
       console.log('出错了！请联系管理员');
       return true;
