@@ -5618,7 +5618,7 @@ jQuery("body").data("rs-fullScreenMode",!1),jQuery(window).on("mozfullscreenchan
                 var slick_arrows=false;
                 if(bannernum>1) {slick_arrows=true;}
                 $('.banner_qilin_28_1_57417 .tp-banner').revolution({
-                    jsFileLocation: "/static/site/pc/js/",
+                    jsFileLocation: "static/site/pc/js/",
                     sliderType: "standard",
                     dottedOverlay: "none",
                     delay: banner_speed,  /*自定义轮播速度*/
