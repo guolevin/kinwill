@@ -348,8 +348,6 @@ ${renderFootLinks(footer.newsLinks)}
 
 // ================= 栏目高亮映射 =================
 
-const SECTIONS = ['home', 'about', 'product', 'app', 'news', 'contact'];
-
 function sectionOf(filename) {
   if (filename === 'index.html') return 'home';
   if (filename === 'about.html' || filename.startsWith('teamShowcase')) return 'about';
