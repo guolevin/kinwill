@@ -4,5 +4,13 @@
  * 数组顺序即轮播顺序。
  */
 window.BANNERS = {
-  default: ['static/image/6AD030B8-1F231890-BD6462F2-BD84C1FF0.jpg', 'static/image/74F58A76-9EC59BD1-CCD5DF7F-C2B618FF0.jpg', 'static/image/299D5A10-C21646B3-AFCAAA22-FBF646970.jpg']
+  default: [
+    // 'static/image/6AD030B8-1F231890-BD6462F2-BD84C1FF0.jpg', 
+    // 'static/image/74F58A76-9EC59BD1-CCD5DF7F-C2B618FF0.jpg', 
+    // 'static/image/299D5A10-C21646B3-AFCAAA22-FBF646970.jpg',
+    'static/image/banners/d67ee70af95e44169bc24daa6a126b1f.png',
+    'static/image/banners/0c1e7613c570366f93ebf88f8f2d325a.png',
+    'static/image/banners/404502b24b16fdd73559c1effecf74e0.jpg',
+    'static/image/banners/e888dc728f1dd3990d73872decf8b92f.jpg'
+  ]
 };
